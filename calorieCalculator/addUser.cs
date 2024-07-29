@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace calorieCalculator
 {
@@ -15,6 +16,32 @@ namespace calorieCalculator
         public addUser()
         {
             InitializeComponent();
+        }
+        private void clearFields() {
+            txt_name.Clear();
+            txt_surname.Clear();
+            txt_age.Clear();
+            txt_userHeight.Clear();
+            txt_userWeight.Clear();
+        }
+
+        private int caloriesIntake(int age, double height, double weight, string gender) {
+            int calories = 0;
+            
+            if (gender.Contains("Female"))
+            {
+                double BMR = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+                calories = Convert.ToInt32(Math.Round(BMR * 1.375));
+            }
+
+            if (gender.Contains("Male"))
+            {
+                double BMR = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+                calories = Convert.ToInt32(Math.Round(BMR * 1.375));
+               
+            }
+
+            return calories;
         }
         private bool validateForm()
         {
@@ -26,6 +53,9 @@ namespace calorieCalculator
             int surnameblankcount = 0;
 
             int combocount = 0;
+
+            int ageblankcount = 0;
+            int agenumbercount = 0;
 
             int heightblankcount = 0;
             int heightnumbercount = 0;
@@ -99,8 +129,45 @@ namespace calorieCalculator
 
                 }
 
-                // is height number
+                // is age number
                 Validation validation = new Validation();
+
+                if ((validation.isNumber(txt_age.Text) == true) && !(txt_age.Text == "The age must be a number."))
+                {
+
+                    if (agenumbercount > 0)
+                    {
+                        agenumbercount = 0;
+
+                    }
+                }
+                else
+                {
+                    agenumbercount++;
+                    txt_age.Text = "The age must be a number.";
+
+                }
+
+                // is age blank
+                if (!((txt_age.Text == "") && (txt_age.Text == "The age must not be blank.")))
+                {
+
+                    if (ageblankcount > 0)
+                    {
+                        ageblankcount = 0;
+
+                    }
+                }
+                else
+                {
+                    ageblankcount++;
+                    txt_age.Text = "The height must not be blank.";
+
+                }
+
+
+
+            // is height number
 
                 if ((validation.isNumber(txt_userHeight.Text) == true) && !(txt_userHeight.Text == "The height must be a number."))
                 {
@@ -206,7 +273,17 @@ namespace calorieCalculator
                     txt_surname.BackColor = Color.White;
                 }
 
-                if (heightblankcount > 0 || heightnumbercount > 0)
+                if (ageblankcount > 0 || agenumbercount > 0)
+                {
+                    txt_age.BackColor = Color.Red;
+                }
+                else
+                {
+                    txt_age.BackColor = Color.White;
+                }
+
+
+            if (heightblankcount > 0 || heightnumbercount > 0)
                 {
                     txt_userHeight.BackColor = Color.Red;
                 }
@@ -234,7 +311,7 @@ namespace calorieCalculator
                 }
 
 
-            invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount;
+            invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + ageblankcount + agenumbercount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount;
 
                 if (invalidcount == 0)
                 {
@@ -246,26 +323,33 @@ namespace calorieCalculator
                 }
             }
 
-            // private string generateUsername() { 
-            //    Random rnd = new Random();
-            //    int randNum = rnd.Next(0,4);
-
-
-            // }
-        
-
+         
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            txt_name.Clear();
-            txt_surname.Clear();
-            txt_userHeight.Clear();
-            txt_userWeight.Clear();
-
+            clearFields();
         }
 
         private void btn_enter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(validateForm() == true ? "Yes" : "No");
+           
+            Database database = new Database();
+
+            if (validateForm() == true)
+            {
+
+                string Username = database.generateUsername(txt_name.Text);
+                string Name = txt_name.Text;
+                string Surname = txt_surname.Text;
+                string Gender = comboBox_gender.SelectedItem.ToString();
+                int Age = Convert.ToInt32(txt_age.Text);
+                double Height = Convert.ToDouble(txt_userHeight.Text);
+                double Weight = Convert.ToDouble(txt_userWeight.Text);
+                int TargetCalories = caloriesIntake(Age,Height,Weight,Gender);
+
+                
+               database.insertUser(Username,Name,Surname,Gender,Age,Height,Weight,TargetCalories);
+               clearFields();
+            }
         }
 
     }

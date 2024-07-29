@@ -16,11 +16,12 @@ namespace calorieCalculator
         public Login()
         {
             InitializeComponent();
+            database.CreateDatabaseAndTables();
         }
 
         
-       
-
+       Database database = new Database();
+        
         private void Form1_Load(object sender, EventArgs e)
         {
            Database database = new Database();
@@ -85,7 +86,6 @@ namespace calorieCalculator
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             Form newUser = new addUser();
-
             newUser.Show();
         }
     }

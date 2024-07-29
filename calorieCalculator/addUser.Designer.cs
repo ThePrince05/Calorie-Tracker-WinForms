@@ -41,6 +41,8 @@
             this.btn_clear = new System.Windows.Forms.Button();
             this.txt_surname = new System.Windows.Forms.TextBox();
             this.lbl_surname = new System.Windows.Forms.Label();
+            this.lbl_age = new System.Windows.Forms.Label();
+            this.txt_age = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_name
@@ -64,7 +66,7 @@
             // 
             // txt_userHeight
             // 
-            this.txt_userHeight.Location = new System.Drawing.Point(186, 375);
+            this.txt_userHeight.Location = new System.Drawing.Point(186, 471);
             this.txt_userHeight.Name = "txt_userHeight";
             this.txt_userHeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userHeight.TabIndex = 6;
@@ -74,7 +76,7 @@
             this.lbl_userHeight.AutoSize = true;
             this.lbl_userHeight.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_userHeight.ForeColor = System.Drawing.Color.Black;
-            this.lbl_userHeight.Location = new System.Drawing.Point(181, 331);
+            this.lbl_userHeight.Location = new System.Drawing.Point(181, 427);
             this.lbl_userHeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userHeight.Name = "lbl_userHeight";
             this.lbl_userHeight.Size = new System.Drawing.Size(205, 28);
@@ -83,7 +85,7 @@
             // 
             // txt_userWeight
             // 
-            this.txt_userWeight.Location = new System.Drawing.Point(186, 473);
+            this.txt_userWeight.Location = new System.Drawing.Point(186, 559);
             this.txt_userWeight.Name = "txt_userWeight";
             this.txt_userWeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userWeight.TabIndex = 8;
@@ -93,7 +95,7 @@
             this.lbl_userWeight.AutoSize = true;
             this.lbl_userWeight.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_userWeight.ForeColor = System.Drawing.Color.Black;
-            this.lbl_userWeight.Location = new System.Drawing.Point(181, 429);
+            this.lbl_userWeight.Location = new System.Drawing.Point(181, 515);
             this.lbl_userWeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userWeight.Name = "lbl_userWeight";
             this.lbl_userWeight.Size = new System.Drawing.Size(209, 28);
@@ -137,7 +139,7 @@
             // 
             // btn_enter
             // 
-            this.btn_enter.Location = new System.Drawing.Point(186, 552);
+            this.btn_enter.Location = new System.Drawing.Point(186, 607);
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(109, 44);
             this.btn_enter.TabIndex = 12;
@@ -147,7 +149,7 @@
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(368, 552);
+            this.btn_clear.Location = new System.Drawing.Point(368, 607);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(109, 44);
             this.btn_clear.TabIndex = 13;
@@ -174,12 +176,33 @@
             this.lbl_surname.TabIndex = 14;
             this.lbl_surname.Text = "Enter your Surname";
             // 
+            // lbl_age
+            // 
+            this.lbl_age.AutoSize = true;
+            this.lbl_age.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_age.ForeColor = System.Drawing.Color.Black;
+            this.lbl_age.Location = new System.Drawing.Point(181, 335);
+            this.lbl_age.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_age.Name = "lbl_age";
+            this.lbl_age.Size = new System.Drawing.Size(173, 28);
+            this.lbl_age.TabIndex = 16;
+            this.lbl_age.Text = "Enter your Age";
+            // 
+            // txt_age
+            // 
+            this.txt_age.Location = new System.Drawing.Point(186, 382);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(291, 31);
+            this.txt_age.TabIndex = 17;
+            // 
             // addUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(625, 618);
+            this.ClientSize = new System.Drawing.Size(625, 680);
+            this.Controls.Add(this.txt_age);
+            this.Controls.Add(this.lbl_age);
             this.Controls.Add(this.txt_surname);
             this.Controls.Add(this.lbl_surname);
             this.Controls.Add(this.btn_clear);
@@ -220,5 +243,7 @@
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.TextBox txt_surname;
         private System.Windows.Forms.Label lbl_surname;
+        private System.Windows.Forms.Label lbl_age;
+        private System.Windows.Forms.TextBox txt_age;
     }
 }
