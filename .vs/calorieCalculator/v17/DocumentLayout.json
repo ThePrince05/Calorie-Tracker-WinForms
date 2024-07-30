@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|c:\\users\\administrator\\source\\repos\\caloriecalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|c:\\users\\administrator\\source\\repos\\caloriecalculator\\caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|c:\\users\\administrator\\source\\repos\\caloriecalculator\\caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|c:\\users\\administrator\\source\\repos\\caloriecalculator\\caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieCalculator.csproj|solutionrelative:caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Form1.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Form1.cs",
+              "RelativeToolTip": "calorieCalculator\\Form1.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAhwIYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T15:39:26.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
+              "RelativeToolTip": "calorieCalculator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T15:42:17.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,34 +86,9 @@
               "RelativeDocumentMoniker": "calorieCalculator\\Database.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Database.cs",
               "RelativeToolTip": "calorieCalculator\\Database.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJ4AAAAAAAAA",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAAALEAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T15:46:28.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "addUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\addUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T16:31:43.621Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "addUser.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeToolTip": "calorieCalculator\\addUser.cs",
-              "ViewState": "AQIAAE0BAAAAAAAAAAAAAF4BAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T16:54:49.033Z",
               "EditorCaption": ""
             },
             {
@@ -91,44 +100,71 @@
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Form1.cs [Design]",
               "RelativeToolTip": "calorieCalculator\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T13:40:16.089Z"
+              "WhenOpened": "2024-07-28T13:40:16.089Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Form1.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\Form1.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Form1.cs",
-              "RelativeToolTip": "calorieCalculator\\Form1.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAIA3wDcAAAAMAAAA",
+              "Title": "editUser.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\editUser.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
+              "RelativeToolTip": "calorieCalculator\\editUser.cs",
+              "ViewState": "AQIAAI4BAAAAAAAAAAAAAKIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T15:39:26.837Z"
+              "WhenOpened": "2024-07-30T14:32:43.592Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "editUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\editUser.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs [Design]",
+              "RelativeToolTip": "calorieCalculator\\editUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T14:26:54.343Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "addUser.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
+              "RelativeToolTip": "calorieCalculator\\addUser.cs",
+              "ViewState": "AQIAAE4BAAAAAAAAAAAAAFoBAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T16:54:49.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Validation.cs",
               "RelativeDocumentMoniker": "calorieCalculator\\Validation.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Validation.cs",
               "RelativeToolTip": "calorieCalculator\\Validation.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABgAAAAIAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T16:57:14.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
-              "RelativeToolTip": "calorieCalculator\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "addUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs [Design]",
+              "RelativeToolTip": "calorieCalculator\\addUser.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T15:42:17.641Z"
+              "WhenOpened": "2024-07-28T16:31:43.621Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

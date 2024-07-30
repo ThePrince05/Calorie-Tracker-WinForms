@@ -8,13 +8,18 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using Microsoft.Data.Sqlite;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace calorieCalculator
 {
     internal class Database
     {
-        // Create the database folder for the application
+
+        internal static class GlobalVariables
+        {
+            internal static string currentUser { get; set; }
+        }
         internal string generateUsername(string firstname) {
 
             int count = 1; // Number of unique numbers to generate
@@ -62,7 +67,7 @@ namespace calorieCalculator
             
         }
 
-    
+        // Create the database folder for the application
         internal string GetDatabasePath()
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -132,7 +137,7 @@ namespace calorieCalculator
             }
             else
             {
-                MessageBox.Show("Database already exists.");
+                // MessageBox.Show("Database already exists.");
             }
         }
         internal void insertUser(string username, string name,string surname, string gender, int age, double height, double weight, int targetCalories) {
@@ -158,6 +163,40 @@ namespace calorieCalculator
             conn.Close();
 
             MessageBox.Show("User Inserted Successfully");
+        }
+
+        internal void updateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
+        {
+
+            string databasePath = GetDatabasePath();
+            SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}");
+            conn.Open();
+
+            string query = "UPDATE Users SET Name = @Name, Surname = @Surname, Gender = @Gender, Age = @Age, Height = @Height, Weight = @Weight, TargetCalories = @TargetCalories WHERE Username = @Username";
+            using (SQLiteCommand cmd = new SQLiteCommand(query,conn))
+            {
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Surname", surname);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@Age", age);
+                cmd.Parameters.AddWithValue("@Height", height);
+                cmd.Parameters.AddWithValue("@Weight", weight);
+                cmd.Parameters.AddWithValue("@TargetCalories", targetCalories);
+                
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("User information updated successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error updating user information");
+                }
+            }
+
+            
+ 
         }
 
     }

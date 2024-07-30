@@ -29,3 +29,7 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debu
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieC.D1A6B20D.Up2Date
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\en-ZA\calorieCalculator.resources.dll
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.Login.en-ZA.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\en-ZA\calorieCalculator.resources.dll
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.editUser.resources

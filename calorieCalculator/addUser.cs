@@ -349,8 +349,64 @@ namespace calorieCalculator
                 
                database.insertUser(Username,Name,Surname,Gender,Age,Height,Weight,TargetCalories);
                clearFields();
+
+                this.Close();
             }
         }
 
+        private void addUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_surname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_age_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_gender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_age_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_userHeight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_userWeight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_userHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_userWeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_userName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
