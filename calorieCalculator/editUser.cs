@@ -50,7 +50,7 @@ namespace calorieCalculator
             }
         }
 
-        //validation
+        
         private void clearFields() {
             txt_name.Clear();
             txt_surname.Clear();
@@ -60,6 +60,7 @@ namespace calorieCalculator
             txt_calories.Clear();
 
         }
+        //validation
         private bool validateForm()
         {
             int invalidcount = 0;
@@ -181,7 +182,7 @@ namespace calorieCalculator
             else
             {
                 ageblankcount++;
-                txt_age.Text = "The height must not be blank.";
+                txt_age.Text = "The age must not be blank.";
 
             }
 
@@ -405,19 +406,26 @@ namespace calorieCalculator
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if(validateForm() == true){
+            try
+            {
+                if (validateForm() == true)
+                {
 
-                string Username = Database.GlobalVariables.currentUser;
-                string Name = txt_name.Text;
-                string Surname = txt_surname.Text;
-                string Gender = comboBox_gender.SelectedItem.ToString();
-                int Age = Convert.ToInt32(txt_age.Text);
-                double Height = Convert.ToDouble(txt_userHeight.Text);
-                double Weight = Convert.ToDouble(txt_userWeight.Text);
-                int TargetCalories = Convert.ToInt32(txt_calories.Text);
+                    string Username = Database.GlobalVariables.currentUser;
+                    string Name = txt_name.Text;
+                    string Surname = txt_surname.Text;
+                    string Gender = comboBox_gender.SelectedItem.ToString();
+                    int Age = Convert.ToInt32(txt_age.Text);
+                    double Height = Convert.ToDouble(txt_userHeight.Text);
+                    double Weight = Convert.ToDouble(txt_userWeight.Text);
+                    int TargetCalories = Convert.ToInt32(txt_calories.Text);
 
 
-                database.updateUser(Username,Name,Surname,Gender,Age,Height,Weight,TargetCalories);
+                    database.updateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
+                }
+            } 
+            catch {
+                MessageBox.Show("Opps, something went wrong.");    
             }
         }
 

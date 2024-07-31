@@ -161,7 +161,7 @@ namespace calorieCalculator
                 else
                 {
                     ageblankcount++;
-                    txt_age.Text = "The height must not be blank.";
+                    txt_age.Text = "The age must not be blank.";
 
                 }
 
@@ -331,26 +331,30 @@ namespace calorieCalculator
 
         private void btn_enter_Click(object sender, EventArgs e)
         {
-           
-            Database database = new Database();
-
-            if (validateForm() == true)
+            try
             {
+                Database database = new Database();
 
-                string Username = database.generateUsername(txt_name.Text);
-                string Name = txt_name.Text;
-                string Surname = txt_surname.Text;
-                string Gender = comboBox_gender.SelectedItem.ToString();
-                int Age = Convert.ToInt32(txt_age.Text);
-                double Height = Convert.ToDouble(txt_userHeight.Text);
-                double Weight = Convert.ToDouble(txt_userWeight.Text);
-                int TargetCalories = caloriesIntake(Age,Height,Weight,Gender);
+                if (validateForm() == true)
+                {
 
-                
-               database.insertUser(Username,Name,Surname,Gender,Age,Height,Weight,TargetCalories);
-               clearFields();
+                    string Username = database.generateUsername(txt_name.Text);
+                    string Name = txt_name.Text;
+                    string Surname = txt_surname.Text;
+                    string Gender = comboBox_gender.SelectedItem.ToString();
+                    int Age = Convert.ToInt32(txt_age.Text);
+                    double Height = Convert.ToDouble(txt_userHeight.Text);
+                    double Weight = Convert.ToDouble(txt_userWeight.Text);
+                    int TargetCalories = caloriesIntake(Age, Height, Weight, Gender);
 
-                this.Close();
+
+                    database.insertUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
+                    clearFields();
+
+                    this.Close();
+                }
+            } catch {
+                MessageBox.Show("Opps, something went wrong.");
             }
         }
 

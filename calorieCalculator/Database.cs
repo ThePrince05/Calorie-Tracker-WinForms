@@ -141,62 +141,169 @@ namespace calorieCalculator
             }
         }
         internal void insertUser(string username, string name,string surname, string gender, int age, double height, double weight, int targetCalories) {
-
-            string databasePath = GetDatabasePath();
-            SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}");
-            conn.Open();
-
-            using (SQLiteCommand cmd = new SQLiteCommand(conn))
+            try
             {
-                cmd.CommandText = "INSERT INTO Users (Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Name", name);
-                cmd.Parameters.AddWithValue("@Surname", surname);
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.Parameters.AddWithValue("@Age", age);
-                cmd.Parameters.AddWithValue("@Height", height);
-                cmd.Parameters.AddWithValue("@Weight", weight);
-                cmd.Parameters.AddWithValue("@TargetCalories", targetCalories);
-                cmd.ExecuteNonQuery();
+                string databasePath = GetDatabasePath();
+                SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}");
+                conn.Open();
+
+                using (SQLiteCommand cmd = new SQLiteCommand(conn))
+                {
+                    cmd.CommandText = "INSERT INTO Users (Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Surname", surname);
+                    cmd.Parameters.AddWithValue("@Gender", gender);
+                    cmd.Parameters.AddWithValue("@Age", age);
+                    cmd.Parameters.AddWithValue("@Height", height);
+                    cmd.Parameters.AddWithValue("@Weight", weight);
+                    cmd.Parameters.AddWithValue("@TargetCalories", targetCalories);
+                    cmd.ExecuteNonQuery();
+                }
+
+                conn.Close();
+
+                MessageBox.Show("User Inserted Successfully");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong");
+            }
+        }
+        internal void insertFood(string foodName, int calories)
+        {
+            try
+            {
+                string databasePath = GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
 
-            conn.Close();
+                    string query = "INSERT INTO Foods (FoodName, Calories) VALUES (@FoodName, @Calories)";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FoodName", foodName);
+                        cmd.Parameters.AddWithValue("@Calories", calories);
 
-            MessageBox.Show("User Inserted Successfully");
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Food saved successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error adding food");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong");
+            }
+        }
+        internal void deleteFood(int foodId)
+        {
+            try
+            {
+                string databasePath = GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM Foods WHERE FoodID = @FoodID";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FoodID", foodId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Food deleted successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error deleting food");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong");
+            }
+        }
+
+        internal void updateFood(int foodId, string foodName, int calories)
+        {
+            try
+            {
+                string databasePath = GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE Foods SET FoodName = @NewFoodName, Calories = @NewCalories WHERE FoodID = @FoodID";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@NewFoodName", foodName);
+                        cmd.Parameters.AddWithValue("@NewCalories", calories);
+                        cmd.Parameters.AddWithValue("@FoodID", foodId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Food updated successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error updating food information");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { 
+                MessageBox.Show("Opps something went wrong");
+            }
         }
 
         internal void updateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
         {
-
-            string databasePath = GetDatabasePath();
-            SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}");
-            conn.Open();
-
-            string query = "UPDATE Users SET Name = @Name, Surname = @Surname, Gender = @Gender, Age = @Age, Height = @Height, Weight = @Weight, TargetCalories = @TargetCalories WHERE Username = @Username";
-            using (SQLiteCommand cmd = new SQLiteCommand(query,conn))
+            try
             {
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Name", name);
-                cmd.Parameters.AddWithValue("@Surname", surname);
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.Parameters.AddWithValue("@Age", age);
-                cmd.Parameters.AddWithValue("@Height", height);
-                cmd.Parameters.AddWithValue("@Weight", weight);
-                cmd.Parameters.AddWithValue("@TargetCalories", targetCalories);
-                
-                int rowsAffected = cmd.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                string databasePath = GetDatabasePath();
+                SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}");
+                conn.Open();
+
+                string query = "UPDATE Users SET Name = @Name, Surname = @Surname, Gender = @Gender, Age = @Age, Height = @Height, Weight = @Weight, TargetCalories = @TargetCalories WHERE Username = @Username";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    MessageBox.Show("User information updated successfully");
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Surname", surname);
+                    cmd.Parameters.AddWithValue("@Gender", gender);
+                    cmd.Parameters.AddWithValue("@Age", age);
+                    cmd.Parameters.AddWithValue("@Height", height);
+                    cmd.Parameters.AddWithValue("@Weight", weight);
+                    cmd.Parameters.AddWithValue("@TargetCalories", targetCalories);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("User information updated successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error updating user information");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Error updating user information");
-                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong");
             }
 
-            
- 
         }
 
     }

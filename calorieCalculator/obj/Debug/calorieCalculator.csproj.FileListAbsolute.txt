@@ -33,3 +33,5 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debu
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.Login.en-ZA.resources
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\en-ZA\calorieCalculator.resources.dll
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.editUser.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.addFood.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.logFood.resources

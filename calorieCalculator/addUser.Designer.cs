@@ -50,7 +50,7 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(103, 228);
+            this.txt_name.Location = new System.Drawing.Point(103, 215);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(291, 31);
             this.txt_name.TabIndex = 4;
@@ -70,7 +70,7 @@
             // 
             // txt_userHeight
             // 
-            this.txt_userHeight.Location = new System.Drawing.Point(103, 432);
+            this.txt_userHeight.Location = new System.Drawing.Point(103, 419);
             this.txt_userHeight.Name = "txt_userHeight";
             this.txt_userHeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userHeight.TabIndex = 6;
@@ -91,7 +91,7 @@
             // 
             // txt_userWeight
             // 
-            this.txt_userWeight.Location = new System.Drawing.Point(427, 432);
+            this.txt_userWeight.Location = new System.Drawing.Point(427, 419);
             this.txt_userWeight.Name = "txt_userWeight";
             this.txt_userWeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userWeight.TabIndex = 8;
@@ -129,7 +129,7 @@
             this.comboBox_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox_gender.Location = new System.Drawing.Point(103, 325);
+            this.comboBox_gender.Location = new System.Drawing.Point(103, 313);
             this.comboBox_gender.Name = "comboBox_gender";
             this.comboBox_gender.Size = new System.Drawing.Size(291, 34);
             this.comboBox_gender.TabIndex = 10;
@@ -169,7 +169,7 @@
             // 
             // txt_surname
             // 
-            this.txt_surname.Location = new System.Drawing.Point(427, 226);
+            this.txt_surname.Location = new System.Drawing.Point(427, 215);
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(291, 31);
             this.txt_surname.TabIndex = 15;
@@ -202,7 +202,7 @@
             // 
             // txt_age
             // 
-            this.txt_age.Location = new System.Drawing.Point(427, 329);
+            this.txt_age.Location = new System.Drawing.Point(427, 316);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(291, 31);
             this.txt_age.TabIndex = 17;

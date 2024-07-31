@@ -89,7 +89,7 @@
             // txt_currentAge
             // 
             this.txt_currentAge.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentAge.Location = new System.Drawing.Point(150, 471);
+            this.txt_currentAge.Location = new System.Drawing.Point(150, 455);
             this.txt_currentAge.Name = "txt_currentAge";
             this.txt_currentAge.ReadOnly = true;
             this.txt_currentAge.Size = new System.Drawing.Size(291, 31);
@@ -110,7 +110,7 @@
             // txt_currentSurname
             // 
             this.txt_currentSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentSurname.Location = new System.Drawing.Point(153, 377);
+            this.txt_currentSurname.Location = new System.Drawing.Point(153, 366);
             this.txt_currentSurname.Name = "txt_currentSurname";
             this.txt_currentSurname.ReadOnly = true;
             this.txt_currentSurname.Size = new System.Drawing.Size(291, 31);
@@ -143,7 +143,7 @@
             // txt_currentWeight
             // 
             this.txt_currentWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentWeight.Location = new System.Drawing.Point(153, 757);
+            this.txt_currentWeight.Location = new System.Drawing.Point(153, 745);
             this.txt_currentWeight.Name = "txt_currentWeight";
             this.txt_currentWeight.ReadOnly = true;
             this.txt_currentWeight.Size = new System.Drawing.Size(291, 31);
@@ -164,7 +164,7 @@
             // txt_currentHeight
             // 
             this.txt_currentHeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentHeight.Location = new System.Drawing.Point(153, 662);
+            this.txt_currentHeight.Location = new System.Drawing.Point(150, 649);
             this.txt_currentHeight.Name = "txt_currentHeight";
             this.txt_currentHeight.ReadOnly = true;
             this.txt_currentHeight.Size = new System.Drawing.Size(291, 31);
@@ -185,7 +185,7 @@
             // txt_currentName
             // 
             this.txt_currentName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentName.Location = new System.Drawing.Point(153, 281);
+            this.txt_currentName.Location = new System.Drawing.Point(153, 268);
             this.txt_currentName.Name = "txt_currentName";
             this.txt_currentName.ReadOnly = true;
             this.txt_currentName.Size = new System.Drawing.Size(291, 31);
@@ -206,7 +206,7 @@
             // txt_currentCalories
             // 
             this.txt_currentCalories.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentCalories.Location = new System.Drawing.Point(153, 853);
+            this.txt_currentCalories.Location = new System.Drawing.Point(150, 841);
             this.txt_currentCalories.Name = "txt_currentCalories";
             this.txt_currentCalories.ReadOnly = true;
             this.txt_currentCalories.Size = new System.Drawing.Size(291, 31);
@@ -227,7 +227,7 @@
             // txt_currentGender
             // 
             this.txt_currentGender.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_currentGender.Location = new System.Drawing.Point(150, 566);
+            this.txt_currentGender.Location = new System.Drawing.Point(150, 555);
             this.txt_currentGender.Name = "txt_currentGender";
             this.txt_currentGender.ReadOnly = true;
             this.txt_currentGender.Size = new System.Drawing.Size(291, 31);
@@ -236,7 +236,7 @@
             // txt_calories
             // 
             this.txt_calories.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_calories.Location = new System.Drawing.Point(506, 853);
+            this.txt_calories.Location = new System.Drawing.Point(506, 841);
             this.txt_calories.Name = "txt_calories";
             this.txt_calories.Size = new System.Drawing.Size(291, 31);
             this.txt_calories.TabIndex = 45;
@@ -256,7 +256,7 @@
             // txt_age
             // 
             this.txt_age.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_age.Location = new System.Drawing.Point(510, 471);
+            this.txt_age.Location = new System.Drawing.Point(510, 455);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(291, 31);
             this.txt_age.TabIndex = 43;
@@ -276,7 +276,7 @@
             // txt_surname
             // 
             this.txt_surname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_surname.Location = new System.Drawing.Point(506, 377);
+            this.txt_surname.Location = new System.Drawing.Point(506, 366);
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(291, 31);
             this.txt_surname.TabIndex = 41;
@@ -309,7 +309,7 @@
             // txt_userWeight
             // 
             this.txt_userWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userWeight.Location = new System.Drawing.Point(511, 757);
+            this.txt_userWeight.Location = new System.Drawing.Point(511, 745);
             this.txt_userWeight.Name = "txt_userWeight";
             this.txt_userWeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userWeight.TabIndex = 38;
@@ -329,7 +329,7 @@
             // txt_userHeight
             // 
             this.txt_userHeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userHeight.Location = new System.Drawing.Point(511, 662);
+            this.txt_userHeight.Location = new System.Drawing.Point(511, 649);
             this.txt_userHeight.Name = "txt_userHeight";
             this.txt_userHeight.Size = new System.Drawing.Size(291, 31);
             this.txt_userHeight.TabIndex = 36;
@@ -349,7 +349,7 @@
             // txt_name
             // 
             this.txt_name.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(506, 281);
+            this.txt_name.Location = new System.Drawing.Point(506, 268);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(291, 31);
             this.txt_name.TabIndex = 34;
@@ -373,7 +373,7 @@
             this.comboBox_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox_gender.Location = new System.Drawing.Point(512, 566);
+            this.comboBox_gender.Location = new System.Drawing.Point(510, 555);
             this.comboBox_gender.Name = "comboBox_gender";
             this.comboBox_gender.Size = new System.Drawing.Size(291, 31);
             this.comboBox_gender.TabIndex = 46;
