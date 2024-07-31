@@ -16,7 +16,7 @@ namespace calorieCalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new logFood());
+            Application.Run(new Login());
         }
     }
 }

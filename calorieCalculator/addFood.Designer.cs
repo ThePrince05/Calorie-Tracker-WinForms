@@ -120,7 +120,7 @@
             this.lbl_calories.AutoSize = true;
             this.lbl_calories.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_calories.ForeColor = System.Drawing.Color.Black;
-            this.lbl_calories.Location = new System.Drawing.Point(13, 435);
+            this.lbl_calories.Location = new System.Drawing.Point(8, 515);
             this.lbl_calories.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_calories.Name = "lbl_calories";
             this.lbl_calories.Size = new System.Drawing.Size(164, 28);
@@ -209,7 +209,7 @@
             this.groupBox1.Controls.Add(this.radioButton_kilojoules);
             this.groupBox1.Controls.Add(this.radioButton_calories);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 466);
+            this.groupBox1.Location = new System.Drawing.Point(18, 435);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(259, 64);
             this.groupBox1.TabIndex = 54;

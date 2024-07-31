@@ -165,7 +165,7 @@ namespace calorieCalculator
 
                 MessageBox.Show("User Inserted Successfully");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Opps something went wrong");
             }
@@ -197,9 +197,47 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Opps something went wrong");
+            }
+        }
+        internal void insertMeal(string username, string foodName, string mealType, string date, string time, int caloriesInServing)
+        {
+            try
+            {
+
+                string databasePath = GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Meals (Username, FoodName, MealType, Date, Time, CaloriesInServing) VALUES (?, ?, ?, ?, ?, ?)";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@FoodName", foodName);
+                        cmd.Parameters.AddWithValue("@MealType", mealType);
+                        cmd.Parameters.AddWithValue("@Date", date);
+                        cmd.Parameters.AddWithValue("@Time", time);
+                        cmd.Parameters.AddWithValue("@CaloriesInServing", caloriesInServing);
+                        // ... rest of your code
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Meal logged successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error logging food");
+                        }
+                    }
+                }
+            }
+            catch {
+                MessageBox.Show("Opps, something went wrong.");
             }
         }
         internal void deleteFood(int foodId)
@@ -228,7 +266,7 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Opps something went wrong");
             }
@@ -262,7 +300,7 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception ex) { 
+            catch (Exception) { 
                 MessageBox.Show("Opps something went wrong");
             }
         }
@@ -299,7 +337,7 @@ namespace calorieCalculator
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Opps something went wrong");
             }

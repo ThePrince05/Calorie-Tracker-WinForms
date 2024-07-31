@@ -173,21 +173,21 @@ namespace calorieCalculator
         }
 
             private void PopulateDataGridView()
-        {
-            string databasePath = database.GetDatabasePath();
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
             {
-                conn.Open();
-
-                string query = "SELECT FoodID, FoodName, Calories FROM Foods";
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    DGV_manageFood.DataSource = dt;
+                    conn.Open();
+
+                    string query = "SELECT FoodID, FoodName, Calories FROM Foods";
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DGV_manageFood.DataSource = dt;
+                    }
                 }
             }
-        }
         private void clearFields() {
             txt_foodID.Clear();
             txt_foodName.Clear();

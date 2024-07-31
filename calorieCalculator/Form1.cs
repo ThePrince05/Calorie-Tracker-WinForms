@@ -130,8 +130,8 @@ namespace calorieCalculator
                 Database.GlobalVariables.currentUser = comboBox_username.SelectedItem.ToString();
                 this.Hide();
                 
-                Form editUser = new editUser();
-                editUser.Show();
+                Form form = new logFood();
+                form.Show();
             }
             else { 
                 comboBox_username.BackColor = Color.Red;
