@@ -46,8 +46,7 @@
             this.DGV_lunch = new System.Windows.Forms.DataGridView();
             this.lbl_dinner = new System.Windows.Forms.Label();
             this.DGV_dinner = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_mealID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_goalTitle = new System.Windows.Forms.Label();
@@ -60,6 +59,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.checkBox_fruit = new System.Windows.Forms.CheckBox();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.lbl_breakfastTotal = new System.Windows.Forms.Label();
+            this.lbl_lunchTotal = new System.Windows.Forms.Label();
+            this.lbl_dinnerTotal = new System.Windows.Forms.Label();
+            this.btn_cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_manageFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_breakfast)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_lunch)).BeginInit();
@@ -192,7 +199,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Location = new System.Drawing.Point(12, 368);
+            this.panel1.Location = new System.Drawing.Point(12, 345);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1417, 9);
@@ -203,7 +210,7 @@
             this.lbl_foodLogged.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Underline);
             this.lbl_foodLogged.ForeColor = System.Drawing.Color.Black;
             this.lbl_foodLogged.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_foodLogged.Location = new System.Drawing.Point(566, 382);
+            this.lbl_foodLogged.Location = new System.Drawing.Point(566, 372);
             this.lbl_foodLogged.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_foodLogged.Name = "lbl_foodLogged";
             this.lbl_foodLogged.Size = new System.Drawing.Size(258, 47);
@@ -215,7 +222,7 @@
             this.lbl_breakfast.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_breakfast.ForeColor = System.Drawing.Color.Black;
             this.lbl_breakfast.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_breakfast.Location = new System.Drawing.Point(168, 442);
+            this.lbl_breakfast.Location = new System.Drawing.Point(168, 432);
             this.lbl_breakfast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_breakfast.Name = "lbl_breakfast";
             this.lbl_breakfast.Size = new System.Drawing.Size(152, 37);
@@ -227,21 +234,22 @@
             this.DGV_breakfast.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_breakfast.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DGV_breakfast.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_breakfast.Location = new System.Drawing.Point(32, 483);
+            this.DGV_breakfast.Location = new System.Drawing.Point(32, 473);
             this.DGV_breakfast.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_breakfast.Name = "DGV_breakfast";
             this.DGV_breakfast.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DGV_breakfast.RowHeadersWidth = 51;
             this.DGV_breakfast.RowTemplate.Height = 24;
-            this.DGV_breakfast.Size = new System.Drawing.Size(422, 241);
+            this.DGV_breakfast.Size = new System.Drawing.Size(422, 191);
             this.DGV_breakfast.TabIndex = 52;
+            this.DGV_breakfast.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_breakfast_CellContentClick);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(631, 442);
+            this.label4.Location = new System.Drawing.Point(631, 432);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 37);
@@ -253,21 +261,22 @@
             this.DGV_lunch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_lunch.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DGV_lunch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_lunch.Location = new System.Drawing.Point(494, 483);
+            this.DGV_lunch.Location = new System.Drawing.Point(494, 473);
             this.DGV_lunch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_lunch.Name = "DGV_lunch";
             this.DGV_lunch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DGV_lunch.RowHeadersWidth = 51;
             this.DGV_lunch.RowTemplate.Height = 24;
-            this.DGV_lunch.Size = new System.Drawing.Size(422, 241);
+            this.DGV_lunch.Size = new System.Drawing.Size(422, 191);
             this.DGV_lunch.TabIndex = 54;
+            this.DGV_lunch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_lunch_CellContentClick);
             // 
             // lbl_dinner
             // 
             this.lbl_dinner.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dinner.ForeColor = System.Drawing.Color.Black;
             this.lbl_dinner.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_dinner.Location = new System.Drawing.Point(1088, 442);
+            this.lbl_dinner.Location = new System.Drawing.Point(1088, 432);
             this.lbl_dinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_dinner.Name = "lbl_dinner";
             this.lbl_dinner.Size = new System.Drawing.Size(131, 37);
@@ -279,42 +288,32 @@
             this.DGV_dinner.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_dinner.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DGV_dinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_dinner.Location = new System.Drawing.Point(952, 483);
+            this.DGV_dinner.Location = new System.Drawing.Point(952, 473);
             this.DGV_dinner.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_dinner.Name = "DGV_dinner";
             this.DGV_dinner.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DGV_dinner.RowHeadersWidth = 51;
             this.DGV_dinner.RowTemplate.Height = 24;
-            this.DGV_dinner.Size = new System.Drawing.Size(422, 241);
+            this.DGV_dinner.Size = new System.Drawing.Size(422, 191);
             this.DGV_dinner.TabIndex = 56;
+            this.DGV_dinner.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_dinner_CellContentClick);
             // 
-            // button1
+            // txt_mealID
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(619, 806);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 41);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(619, 768);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(123, 31);
-            this.textBox1.TabIndex = 60;
+            this.txt_mealID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mealID.Location = new System.Drawing.Point(534, 749);
+            this.txt_mealID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_mealID.Name = "txt_mealID";
+            this.txt_mealID.ReadOnly = true;
+            this.txt_mealID.Size = new System.Drawing.Size(123, 31);
+            this.txt_mealID.TabIndex = 60;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(632, 737);
+            this.label3.Location = new System.Drawing.Point(530, 718);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 28);
@@ -324,7 +323,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Location = new System.Drawing.Point(12, 865);
+            this.panel2.Location = new System.Drawing.Point(12, 804);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1417, 9);
@@ -335,7 +334,7 @@
             this.lbl_goalTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Underline);
             this.lbl_goalTitle.ForeColor = System.Drawing.Color.Black;
             this.lbl_goalTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_goalTitle.Location = new System.Drawing.Point(527, 886);
+            this.lbl_goalTitle.Location = new System.Drawing.Point(543, 831);
             this.lbl_goalTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_goalTitle.Name = "lbl_goalTitle";
             this.lbl_goalTitle.Size = new System.Drawing.Size(389, 47);
@@ -347,10 +346,10 @@
             this.lbl_goal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_goal.ForeColor = System.Drawing.Color.Black;
             this.lbl_goal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_goal.Location = new System.Drawing.Point(521, 946);
+            this.lbl_goal.Location = new System.Drawing.Point(437, 887);
             this.lbl_goal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_goal.Name = "lbl_goal";
-            this.lbl_goal.Size = new System.Drawing.Size(50, 37);
+            this.lbl_goal.Size = new System.Drawing.Size(117, 37);
             this.lbl_goal.TabIndex = 63;
             this.lbl_goal.Text = "??";
             // 
@@ -359,7 +358,7 @@
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(602, 946);
+            this.label5.Location = new System.Drawing.Point(562, 887);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 37);
@@ -371,10 +370,10 @@
             this.lbl_food.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_food.ForeColor = System.Drawing.Color.Black;
             this.lbl_food.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_food.Location = new System.Drawing.Point(660, 946);
+            this.lbl_food.Location = new System.Drawing.Point(651, 887);
             this.lbl_food.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_food.Name = "lbl_food";
-            this.lbl_food.Size = new System.Drawing.Size(50, 37);
+            this.lbl_food.Size = new System.Drawing.Size(108, 37);
             this.lbl_food.TabIndex = 65;
             this.lbl_food.Text = "??";
             // 
@@ -383,22 +382,23 @@
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(753, 946);
+            this.label6.Location = new System.Drawing.Point(777, 887);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 37);
             this.label6.TabIndex = 66;
             this.label6.Text = "=";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // lbl_remaining
             // 
             this.lbl_remaining.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_remaining.ForeColor = System.Drawing.Color.Black;
             this.lbl_remaining.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_remaining.Location = new System.Drawing.Point(825, 946);
+            this.lbl_remaining.Location = new System.Drawing.Point(872, 887);
             this.lbl_remaining.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_remaining.Name = "lbl_remaining";
-            this.lbl_remaining.Size = new System.Drawing.Size(50, 37);
+            this.lbl_remaining.Size = new System.Drawing.Size(109, 37);
             this.lbl_remaining.TabIndex = 67;
             this.lbl_remaining.Text = "??";
             // 
@@ -407,7 +407,7 @@
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(509, 993);
+            this.label7.Location = new System.Drawing.Point(438, 924);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 37);
@@ -419,7 +419,7 @@
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(648, 993);
+            this.label8.Location = new System.Drawing.Point(652, 924);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 37);
@@ -432,7 +432,7 @@
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(782, 993);
+            this.label9.Location = new System.Drawing.Point(846, 924);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 37);
@@ -450,6 +450,99 @@
             this.checkBox_fruit.Text = "Is it a Fruit ?";
             this.checkBox_fruit.UseVisualStyleBackColor = true;
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(717, 741);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(122, 41);
+            this.btn_delete.TabIndex = 75;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(1235, 125);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(161, 31);
+            this.txt_search.TabIndex = 77;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(1230, 94);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 28);
+            this.label11.TabIndex = 76;
+            this.label11.Text = "Search";
+            // 
+            // btn_search
+            // 
+            this.btn_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(1237, 180);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(137, 41);
+            this.btn_search.TabIndex = 78;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // lbl_breakfastTotal
+            // 
+            this.lbl_breakfastTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_breakfastTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_breakfastTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_breakfastTotal.Location = new System.Drawing.Point(181, 667);
+            this.lbl_breakfastTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_breakfastTotal.Name = "lbl_breakfastTotal";
+            this.lbl_breakfastTotal.Size = new System.Drawing.Size(192, 37);
+            this.lbl_breakfastTotal.TabIndex = 79;
+            this.lbl_breakfastTotal.Text = "??";
+            // 
+            // lbl_lunchTotal
+            // 
+            this.lbl_lunchTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lunchTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_lunchTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_lunchTotal.Location = new System.Drawing.Point(647, 667);
+            this.lbl_lunchTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_lunchTotal.Name = "lbl_lunchTotal";
+            this.lbl_lunchTotal.Size = new System.Drawing.Size(192, 37);
+            this.lbl_lunchTotal.TabIndex = 80;
+            this.lbl_lunchTotal.Text = "??";
+            // 
+            // lbl_dinnerTotal
+            // 
+            this.lbl_dinnerTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dinnerTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_dinnerTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_dinnerTotal.Location = new System.Drawing.Point(1109, 667);
+            this.lbl_dinnerTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_dinnerTotal.Name = "lbl_dinnerTotal";
+            this.lbl_dinnerTotal.Size = new System.Drawing.Size(192, 37);
+            this.lbl_dinnerTotal.TabIndex = 81;
+            this.lbl_dinnerTotal.Text = "??";
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Location = new System.Drawing.Point(1239, 227);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(137, 41);
+            this.btn_cancel.TabIndex = 82;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
             // logFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -457,6 +550,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1441, 1055);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.lbl_dinnerTotal);
+            this.Controls.Add(this.lbl_lunchTotal);
+            this.Controls.Add(this.lbl_breakfastTotal);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.checkBox_fruit);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -468,9 +569,8 @@
             this.Controls.Add(this.lbl_goal);
             this.Controls.Add(this.lbl_goalTitle);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_mealID);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_dinner);
             this.Controls.Add(this.DGV_dinner);
             this.Controls.Add(this.label4);
@@ -524,8 +624,7 @@
         private System.Windows.Forms.DataGridView DGV_lunch;
         private System.Windows.Forms.Label lbl_dinner;
         private System.Windows.Forms.DataGridView DGV_dinner;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_mealID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_goalTitle;
@@ -538,5 +637,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkBox_fruit;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Label lbl_breakfastTotal;
+        private System.Windows.Forms.Label lbl_lunchTotal;
+        private System.Windows.Forms.Label lbl_dinnerTotal;
+        private System.Windows.Forms.Button btn_cancel;
     }
 }

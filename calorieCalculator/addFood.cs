@@ -174,6 +174,8 @@ namespace calorieCalculator
 
             private void PopulateDataGridView()
             {
+            try
+            {
                 string databasePath = database.GetDatabasePath();
                 using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
@@ -187,6 +189,11 @@ namespace calorieCalculator
                         DGV_manageFood.DataSource = dt;
                     }
                 }
+            }
+            catch (Exception ex) { 
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+            }
+
             }
         private void clearFields() {
             txt_foodID.Clear();
@@ -230,7 +237,7 @@ namespace calorieCalculator
                     clearFields();
                 }
             }
-            catch (Exception) {
+            catch{
                 MessageBox.Show("Enter only whole numbers in calories.");
             }
 

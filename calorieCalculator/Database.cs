@@ -19,6 +19,7 @@ namespace calorieCalculator
         internal static class GlobalVariables
         {
             internal static string currentUser { get; set; }
+            internal static int targetCalories { get; set; }
         }
         internal string generateUsername(string firstname) {
 
@@ -165,9 +166,9 @@ namespace calorieCalculator
 
                 MessageBox.Show("User Inserted Successfully");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong");
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
             }
         }
         internal void insertFood(string foodName, int calories)
@@ -197,9 +198,9 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong");
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
             }
         }
         internal void insertMeal(string username, string foodName, string mealType, string date, string time, int caloriesInServing)
@@ -236,8 +237,8 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch {
-                MessageBox.Show("Opps, something went wrong.");
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
         internal void deleteFood(int foodId)
@@ -266,9 +267,9 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong");
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
             }
         }
 
@@ -300,8 +301,8 @@ namespace calorieCalculator
                     }
                 }
             }
-            catch (Exception) { 
-                MessageBox.Show("Opps something went wrong");
+            catch (Exception ex) { 
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
             }
         }
 
@@ -337,9 +338,9 @@ namespace calorieCalculator
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong");
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
             }
 
         }

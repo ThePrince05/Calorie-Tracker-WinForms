@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace calorieCalculator
 {
@@ -21,30 +22,74 @@ namespace calorieCalculator
             PopulateComboBox();
             database.CreateDatabaseAndTables();
         }
+        public static class GlobalVariables
+        {
+            public static int TargetCalories { get; set; }
+        }
 
-        
-       Database database = new Database();
+        private void getTargetCalories(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "SELECT TargetCalories FROM Users WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            Database.GlobalVariables.targetCalories = Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            Database.GlobalVariables.targetCalories = 0;
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+            }
+        }
+
+
+        Database database = new Database();
 
         // for the username combobox
         private void PopulateComboBox()
         {
-            string connectionString = "Data Source=" + database.GetDatabasePath(); // Replace with your database path
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT Username FROM Users";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                string connectionString = "Data Source=" + database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            comboBox_username.Items.Add(reader.GetString(0));
+                    conn.Open();
 
+                    string query = "SELECT Username FROM Users";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                comboBox_username.Items.Add(reader.GetString(0));
+
+                            }
                         }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+
+                MessageBox.Show( "Opps, something went wrong on: " + ex.Message);
             }
         }
 
@@ -128,6 +173,7 @@ namespace calorieCalculator
             if (comboBox_username.SelectedIndex != -1)
             {
                 Database.GlobalVariables.currentUser = comboBox_username.SelectedItem.ToString();
+                getTargetCalories(comboBox_username.SelectedItem.ToString());
                 this.Hide();
                 
                 Form form = new logFood();
@@ -137,6 +183,11 @@ namespace calorieCalculator
                 comboBox_username.BackColor = Color.Red;
                 MessageBox.Show("Please select a username");
             }
+        }
+
+        private void comboBox_username_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -353,8 +353,8 @@ namespace calorieCalculator
 
                     this.Close();
                 }
-            } catch {
-                MessageBox.Show("Opps, something went wrong.");
+            } catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
 

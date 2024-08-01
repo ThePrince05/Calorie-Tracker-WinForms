@@ -5,11 +5,14 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace calorieCalculator
 {
@@ -24,6 +27,45 @@ namespace calorieCalculator
             populateDGVBreakfast();
             populateDGVLunch();
             populateDGVDinner();
+            mealTotal();
+            setCalorieLabels();
+        }
+
+        internal void setCalorieLabels() {
+            int targetCalories = Database.GlobalVariables.targetCalories;
+            lbl_goal.Text = targetCalories.ToString();
+
+            string username = Database.GlobalVariables.currentUser;
+            int foodTotal = totalBreakfastCalories(username) + totalLunchCalories(username) + totalDinnerCalories(username);
+            lbl_food.Text = foodTotal.ToString();
+
+            int remaining = targetCalories - foodTotal;
+            lbl_remaining.Text = remaining.ToString();
+        }
+        private void filterDataGridViewByFoodName(string foodName)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "SELECT FoodID, FoodName, Calories FROM Foods";
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DataView dv = new DataView(dt);
+                        dv.RowFilter = $"FoodName LIKE '%{foodName}%'";
+                        DGV_manageFood.DataSource = dv;
+
+                    }
+                }
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+            }
         }
         private void clearFields() {
             txt_foodName.Clear();
@@ -33,78 +75,114 @@ namespace calorieCalculator
         Database database = new Database();
         private void PopulateDataGridView()
         {
-            string databasePath = database.GetDatabasePath();
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT FoodID, FoodName, Calories FROM Foods";
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    DGV_manageFood.DataSource = dt;
+                    conn.Open();
+
+                    string query = "SELECT FoodID, FoodName, Calories FROM Foods";
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DGV_manageFood.DataSource = dt;
+                    }
                 }
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
         private void populateDGVBreakfast()
         {
-            string databasePath = database.GetDatabasePath();
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
-                    cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
-                    cmd.Parameters.AddWithValue("@MealType", "Breakfast");
+                    conn.Open();
 
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    DGV_breakfast.DataSource = dt;
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@MealType", "Breakfast");
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DGV_breakfast.DataSource = dt;
+                    }
                 }
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
         private void populateDGVLunch()
         {
-            string databasePath = database.GetDatabasePath();
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
-                    cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
-                    cmd.Parameters.AddWithValue("@MealType", "Lunch");
+                    conn.Open();
 
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    DGV_lunch.DataSource = dt;
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@MealType", "Lunch");
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DGV_lunch.DataSource = dt;
+                    }
                 }
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
         private void populateDGVDinner()
         {
-            string databasePath = database.GetDatabasePath();
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
                 {
-                    cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
-                    cmd.Parameters.AddWithValue("@MealType", "Dinner");
+                    conn.Open();
 
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    DGV_dinner.DataSource = dt;
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@MealType", "Dinner");
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DGV_dinner.DataSource = dt;
+                    }
                 }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
         private bool validateForm()
@@ -241,6 +319,150 @@ namespace calorieCalculator
             }
 
         }
+        private int totalBreakfastCalories(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT SUM(CaloriesInServing) AS TotalBreakfastCalories FROM Meals WHERE Username = @Username AND MealType = 'Breakfast' AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return 0; // Or handle the case where no data is found
+                        }
+                    }
+                }
+            }
+            catch(Exception ex){
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                return 0;
+            }
+        }
+        private int totalDinnerCalories(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT SUM(CaloriesInServing) AS TotalDinnerCalories FROM Meals WHERE Username = @Username AND MealType = 'Dinner' AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return 0; // Or handle the case where no data is found
+                        }
+                    }
+                }
+            }
+            catch(Exception ex){
+
+                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                return 0;
+            }
+
+        }
+
+        private void mealTotal() {
+            lbl_breakfastTotal.Text = "Total - " + totalBreakfastCalories(Database.GlobalVariables.currentUser);
+            lbl_lunchTotal.Text = "Total - " + totalLunchCalories(Database.GlobalVariables.currentUser);
+            lbl_dinnerTotal.Text = "Total - " + totalDinnerCalories(Database.GlobalVariables.currentUser);
+        }
+        private int totalLunchCalories(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT SUM(CaloriesInServing) AS TotalLunchCalories FROM Meals WHERE Username = @Username AND MealType = 'Lunch' AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return 0; // Or handle the case where no data is found
+                        }
+                    }
+                }
+            }
+            catch (Exception ex){
+                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                return 0;
+            }
+        
+        }
+        private void deleteMeal(int mealId)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM Meals WHERE MealID = @MealID";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MealID", mealId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Meal deleted successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error deleting meal");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong: " + ex.Message);
+            }
+        }
+
         private void logFood_Load(object sender, EventArgs e)
         {
 
@@ -281,11 +503,13 @@ namespace calorieCalculator
                         populateDGVBreakfast();
                         populateDGVLunch();
                         populateDGVDinner();
+                        mealTotal();
+                        setCalorieLabels();
 
                 }
             }
-            catch {
-                MessageBox.Show("Enter only whole numbers in calories.");
+            catch(Exception ex){
+                MessageBox.Show("Enter only whole numbers in calories: " + ex.Message);
             }
         }
 
@@ -303,6 +527,90 @@ namespace calorieCalculator
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            int validation = 0;
+            if (txt_search.Text =="" || txt_search.Text.Length < 3) { 
+               validation = 1;
+               txt_search.BackColor = Color.Red;
+                MessageBox.Show("Enter a food name that it at least three characters long.");
+            }
+            else
+            {
+                txt_search.BackColor = Color.White;
+                validation = 0;
+            }
+
+            if (validation == 0) {
+                filterDataGridViewByFoodName(txt_search.Text);
+            }
+            
+        }
+
+        private void DGV_breakfast_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.DGV_breakfast.Rows[e.RowIndex];
+
+                txt_mealID.Text = row.Cells["MealID"].Value.ToString();
+                
+            }
+        }
+
+        private void DGV_lunch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.DGV_lunch.Rows[e.RowIndex];
+
+                txt_mealID.Text = row.Cells["MealID"].Value.ToString();
+
+            }
+        }
+
+        private void DGV_dinner_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.DGV_dinner.Rows[e.RowIndex];
+
+                txt_mealID.Text = row.Cells["MealID"].Value.ToString();
+
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (txt_mealID.Text == "")
+            {
+                MessageBox.Show("Please click the meal (foodname) on the table first.");
+                txt_mealID.BackColor = Color.Red;
+            }
+            else {
+                txt_mealID.BackColor = Color.White;
+                int mealID = Convert.ToInt32(txt_mealID.Text);
+
+                deleteMeal(mealID);
+                txt_mealID.Clear();
+                populateDGVBreakfast();
+                populateDGVLunch();
+                populateDGVDinner();
+                mealTotal();
+                setCalorieLabels();
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            PopulateDataGridView();
         }
     }
 }

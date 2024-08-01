@@ -93,6 +93,7 @@
             this.comboBox_username.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox_username, "comboBox_username");
             this.comboBox_username.Name = "comboBox_username";
+            this.comboBox_username.SelectedIndexChanged += new System.EventHandler(this.comboBox_username_SelectedIndexChanged);
             // 
             // pictureBox2
             // 

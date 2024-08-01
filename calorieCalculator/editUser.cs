@@ -24,29 +24,35 @@ namespace calorieCalculator
 
         private void DisplayUserInfo(string username)
         {
-            string connectionString = "Data Source=" + database.GetDatabasePath(); // Replace with your database path
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            try
             {
-                conn.Open();
-
-                string query = "SELECT Name, Surname, Gender, Age, Height, Weight, TargetCalories FROM Users WHERE Username = @Username";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                string connectionString = "Data Source=" + database.GetDatabasePath(); // Replace with your database path
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    conn.Open();
+
+                    string query = "SELECT Name, Surname, Gender, Age, Height, Weight, TargetCalories FROM Users WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        if (reader.Read())
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
                         {
-                            txt_currentName.Text = reader.GetString(0);
-                            txt_currentSurname.Text = reader.GetString(1);
-                            txt_currentGender.Text = reader.GetString(2);
-                            txt_currentAge.Text = reader.GetInt32(3).ToString();
-                            txt_currentHeight.Text = reader.GetDouble(4).ToString();
-                            txt_currentWeight.Text = reader.GetDouble(5).ToString();
-                            txt_currentCalories.Text = reader.GetInt32(6).ToString();
+                            if (reader.Read())
+                            {
+                                txt_currentName.Text = reader.GetString(0);
+                                txt_currentSurname.Text = reader.GetString(1);
+                                txt_currentGender.Text = reader.GetString(2);
+                                txt_currentAge.Text = reader.GetInt32(3).ToString();
+                                txt_currentHeight.Text = reader.GetDouble(4).ToString();
+                                txt_currentWeight.Text = reader.GetDouble(5).ToString();
+                                txt_currentCalories.Text = reader.GetInt32(6).ToString();
+                            }
                         }
                     }
                 }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
             }
         }
 
@@ -424,8 +430,8 @@ namespace calorieCalculator
                     database.updateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
                 }
             } 
-            catch {
-                MessageBox.Show("Opps, something went wrong.");    
+            catch(Exception ex) {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);    
             }
         }
 
