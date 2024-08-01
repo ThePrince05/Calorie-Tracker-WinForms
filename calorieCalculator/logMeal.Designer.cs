@@ -1,6 +1,6 @@
 ﻿namespace calorieCalculator
 {
-    partial class logFood
+    partial class logMeal
     {
         /// <summary>
         /// Required designer variable.

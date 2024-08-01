@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace calorieCalculator
 {
-    public partial class addFood : Form
+    public partial class manageFood : Form
     {
-        public addFood()
+        public manageFood()
         {
             InitializeComponent();
             PopulateDataGridView();

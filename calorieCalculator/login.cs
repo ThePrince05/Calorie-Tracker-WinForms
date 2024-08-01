@@ -176,7 +176,7 @@ namespace calorieCalculator
                 getTargetCalories(comboBox_username.SelectedItem.ToString());
                 this.Hide();
                 
-                Form form = new logFood();
+                Form form = new logMeal();
                 form.Show();
             }
             else { 

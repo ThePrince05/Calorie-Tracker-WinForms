@@ -1,6 +1,6 @@
 ﻿namespace calorieCalculator
 {
-    partial class addFood
+    partial class manageFood
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addFood));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manageFood));
             this.lbl_manageFood = new System.Windows.Forms.Label();
             this.DGV_manageFood = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
