@@ -76,6 +76,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lbl_createUser);
+            this.panel1.ForeColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
@@ -100,6 +101,7 @@
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // iconPictureBox2
             // 

@@ -81,7 +81,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(494, 271);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -267,6 +267,7 @@
             this.Controls.Add(this.DGV_manageFood);
             this.Controls.Add(this.lbl_manageFood);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "manageFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Food";

@@ -31,7 +31,7 @@ namespace calorieCalculator
             setCalorieLabels();
         }
 
-        internal void setCalorieLabels() {
+        private void setCalorieLabels() {
             int targetCalories = Database.GlobalVariables.targetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
@@ -70,6 +70,7 @@ namespace calorieCalculator
         private void clearFields() {
             txt_foodName.Clear();
             txt_quantity.Clear();
+            checkBox_fruit.Checked = false;
         }
 
         Database database = new Database();
@@ -353,6 +354,43 @@ namespace calorieCalculator
                 return 0;
             }
         }
+        private int totalLunchCalories(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    DateTime obj = DateTime.Today;
+                    string today = obj.ToString();
+
+                    string query = "SELECT SUM(CaloriesInServing) AS TotalLunchCalories FROM Meals WHERE Username = @Username AND MealType = 'Lunch' AND Date = @Date";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Date", today);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            return 0; // Or handle the case where no data is found
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                return 0;
+            }
+
+        }
         private int totalDinnerCalories(string username)
         {
             try
@@ -395,42 +433,7 @@ namespace calorieCalculator
             lbl_lunchTotal.Text = "Total - " + totalLunchCalories(Database.GlobalVariables.currentUser);
             lbl_dinnerTotal.Text = "Total - " + totalDinnerCalories(Database.GlobalVariables.currentUser);
         }
-        private int totalLunchCalories(string username)
-        {
-            try
-            {
-                string databasePath = database.GetDatabasePath();
-                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
-                {
-                    conn.Open();
-
-                    DateTime obj = DateTime.Today;
-                    string today = obj.ToString();
-
-                    string query = "SELECT SUM(CaloriesInServing) AS TotalLunchCalories FROM Meals WHERE Username = @Username AND MealType = 'Lunch' AND Date = @Date";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-                        cmd.Parameters.AddWithValue("@Date", today);
-
-                        object result = cmd.ExecuteScalar();
-                        if (result != DBNull.Value)
-                        {
-                            return Convert.ToInt32(result);
-                        }
-                        else
-                        {
-                            return 0; // Or handle the case where no data is found
-                        }
-                    }
-                }
-            }
-            catch (Exception ex){
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
-                return 0;
-            }
         
-        }
         private void deleteMeal(int mealId)
         {
             try
@@ -611,6 +614,16 @@ namespace calorieCalculator
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             PopulateDataGridView();
+        }
+
+        private void lbl_goal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_breakfastTotal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

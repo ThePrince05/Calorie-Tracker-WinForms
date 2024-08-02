@@ -109,6 +109,7 @@ namespace calorieCalculator
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new dashboard());
         }
 
         private void btn_logMeal_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace calorieCalculator
         private void btn_history_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new history());
         }
 
         private void btn_manageFood_Click(object sender, EventArgs e)

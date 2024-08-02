@@ -137,7 +137,7 @@ namespace calorieCalculator
 
         private void lbl_createUser_MouseLeave(object sender, EventArgs e)
         {
-            lbl_createUser.ForeColor = Color.Black;
+            lbl_createUser.ForeColor = Color.Gainsboro;
         }
 
         private void panel1_MouseHover(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace calorieCalculator
 
         private void panel1_MouseLeave(object sender, EventArgs e)
         {
-            lbl_createUser.ForeColor = Color.Black;
+            lbl_createUser.ForeColor = Color.Gainsboro;
         }
 
         private void lbl_createUser_MouseClick(object sender, MouseEventArgs e)
@@ -194,6 +194,11 @@ namespace calorieCalculator
         {
             comboBox_username.Items.Clear();
             PopulateComboBox();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

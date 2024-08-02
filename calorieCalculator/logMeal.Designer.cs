@@ -425,6 +425,7 @@
             this.lbl_goal.Size = new System.Drawing.Size(117, 37);
             this.lbl_goal.TabIndex = 63;
             this.lbl_goal.Text = "??";
+            this.lbl_goal.Click += new System.EventHandler(this.lbl_goal_Click);
             // 
             // label5
             // 
@@ -582,6 +583,7 @@
             this.lbl_breakfastTotal.Size = new System.Drawing.Size(192, 37);
             this.lbl_breakfastTotal.TabIndex = 79;
             this.lbl_breakfastTotal.Text = "??";
+            this.lbl_breakfastTotal.Click += new System.EventHandler(this.lbl_breakfastTotal_Click);
             // 
             // lbl_lunchTotal
             // 
