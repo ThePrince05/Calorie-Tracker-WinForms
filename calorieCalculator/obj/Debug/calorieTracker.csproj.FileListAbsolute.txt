@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieTracker.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.mainLayout.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.manageFood.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.addUser.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.editUser.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.Login.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.logFood.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.Properties.Resources.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.Login.en-ZA.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieTracker.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieTracker.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.exe
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.pdb

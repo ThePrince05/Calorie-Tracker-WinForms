@@ -17,7 +17,6 @@ namespace calorieCalculator
         {
             InitializeComponent();
             PopulateDataGridView();
-
             
         }
         Database database = new Database();
