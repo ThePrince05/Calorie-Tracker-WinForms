@@ -163,8 +163,7 @@ namespace calorieCalculator
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            comboBox_username.Items.Clear();
-            PopulateComboBox();
+           
             
         }
 
@@ -176,7 +175,8 @@ namespace calorieCalculator
                 getTargetCalories(comboBox_username.SelectedItem.ToString());
                 this.Hide();
                 
-                Form form = new logMeal();
+                Form form = new mainLayout();
+                form.WindowState = FormWindowState.Maximized;
                 form.Show();
             }
             else { 
@@ -188,6 +188,12 @@ namespace calorieCalculator
         private void comboBox_username_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            comboBox_username.Items.Clear();
+            PopulateComboBox();
         }
     }
 }

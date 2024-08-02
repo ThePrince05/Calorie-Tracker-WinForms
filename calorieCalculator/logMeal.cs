@@ -16,11 +16,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace calorieCalculator
 {
-    public partial class logFood : Form
+    public partial class logMeal : Form
     {
         int caloriesInServing = 0;
         int caloriesPerHundred = 0;
-        public logFood()
+        public logMeal()
         {
             InitializeComponent();
             PopulateDataGridView();

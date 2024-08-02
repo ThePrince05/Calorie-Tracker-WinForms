@@ -35,11 +35,18 @@
             this.btn_logMeal = new FontAwesome.Sharp.IconButton();
             this.btn_dashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_logout = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
             this.iconPictureBox_user = new FontAwesome.Sharp.IconPictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.panelShadow = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.btn_close = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox_user)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -59,7 +66,8 @@
             // 
             // btn_editProfile
             // 
-            this.btn_editProfile.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_editProfile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_editProfile.FlatAppearance.BorderSize = 0;
             this.btn_editProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editProfile.ForeColor = System.Drawing.Color.Gainsboro;
@@ -81,7 +89,8 @@
             // 
             // btn_manageFood
             // 
-            this.btn_manageFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_manageFood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_manageFood.FlatAppearance.BorderSize = 0;
             this.btn_manageFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manageFood.ForeColor = System.Drawing.Color.Gainsboro;
@@ -90,10 +99,10 @@
             this.btn_manageFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_manageFood.IconSize = 32;
             this.btn_manageFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manageFood.Location = new System.Drawing.Point(0, 320);
+            this.btn_manageFood.Location = new System.Drawing.Point(0, 409);
             this.btn_manageFood.Name = "btn_manageFood";
             this.btn_manageFood.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_manageFood.Size = new System.Drawing.Size(220, 60);
+            this.btn_manageFood.Size = new System.Drawing.Size(220, 74);
             this.btn_manageFood.TabIndex = 5;
             this.btn_manageFood.Text = "Manage Food";
             this.btn_manageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +112,8 @@
             // 
             // btn_history
             // 
-            this.btn_history.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_history.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_history.FlatAppearance.BorderSize = 0;
             this.btn_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_history.ForeColor = System.Drawing.Color.Gainsboro;
@@ -112,10 +122,10 @@
             this.btn_history.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_history.IconSize = 32;
             this.btn_history.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_history.Location = new System.Drawing.Point(0, 260);
+            this.btn_history.Location = new System.Drawing.Point(0, 329);
             this.btn_history.Name = "btn_history";
             this.btn_history.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_history.Size = new System.Drawing.Size(220, 60);
+            this.btn_history.Size = new System.Drawing.Size(220, 74);
             this.btn_history.TabIndex = 4;
             this.btn_history.Text = "History";
             this.btn_history.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +135,8 @@
             // 
             // btn_logMeal
             // 
-            this.btn_logMeal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_logMeal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_logMeal.FlatAppearance.BorderSize = 0;
             this.btn_logMeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logMeal.ForeColor = System.Drawing.Color.Gainsboro;
@@ -134,10 +145,10 @@
             this.btn_logMeal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_logMeal.IconSize = 32;
             this.btn_logMeal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logMeal.Location = new System.Drawing.Point(0, 200);
+            this.btn_logMeal.Location = new System.Drawing.Point(0, 242);
             this.btn_logMeal.Name = "btn_logMeal";
             this.btn_logMeal.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_logMeal.Size = new System.Drawing.Size(220, 60);
+            this.btn_logMeal.Size = new System.Drawing.Size(220, 70);
             this.btn_logMeal.TabIndex = 3;
             this.btn_logMeal.Text = "Log Meal";
             this.btn_logMeal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,19 +158,20 @@
             // 
             // btn_dashboard
             // 
-            this.btn_dashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_dashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_dashboard.FlatAppearance.BorderSize = 0;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_dashboard.IconChar = FontAwesome.Sharp.IconChar.Heartbeat;
+            this.btn_dashboard.IconChar = FontAwesome.Sharp.IconChar.HeartPulse;
             this.btn_dashboard.IconColor = System.Drawing.Color.Gainsboro;
             this.btn_dashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_dashboard.IconSize = 32;
             this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(0, 140);
+            this.btn_dashboard.Location = new System.Drawing.Point(0, 162);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_dashboard.Size = new System.Drawing.Size(220, 60);
+            this.btn_dashboard.Size = new System.Drawing.Size(220, 74);
             this.btn_dashboard.TabIndex = 2;
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,24 +181,39 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.lbl_logout);
+            this.panelLogo.Controls.Add(this.lbl_username);
             this.panelLogo.Controls.Add(this.iconPictureBox_user);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 140);
+            this.panelLogo.Size = new System.Drawing.Size(220, 162);
             this.panelLogo.TabIndex = 2;
             // 
-            // label1
+            // lbl_logout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(44, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "??";
+            this.lbl_logout.AutoSize = true;
+            this.lbl_logout.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logout.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_logout.Location = new System.Drawing.Point(122, 128);
+            this.lbl_logout.Name = "lbl_logout";
+            this.lbl_logout.Size = new System.Drawing.Size(64, 22);
+            this.lbl_logout.TabIndex = 4;
+            this.lbl_logout.Text = "Logout";
+            this.lbl_logout.Click += new System.EventHandler(this.lbl_logout_Click);
+            this.lbl_logout.MouseLeave += new System.EventHandler(this.lbl_logout_MouseLeave);
+            this.lbl_logout.MouseHover += new System.EventHandler(this.lbl_logout_MouseHover);
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_username.Location = new System.Drawing.Point(46, 88);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(27, 20);
+            this.lbl_username.TabIndex = 3;
+            this.lbl_username.Text = "??";
             // 
             // iconPictureBox_user
             // 
@@ -201,20 +228,85 @@
             this.iconPictureBox_user.Size = new System.Drawing.Size(57, 54);
             this.iconPictureBox_user.TabIndex = 2;
             this.iconPictureBox_user.TabStop = false;
+            this.iconPictureBox_user.Click += new System.EventHandler(this.iconPictureBox_user_Click);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.btn_close);
+            this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(962, 75);
+            this.panelTitleBar.TabIndex = 2;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.Location = new System.Drawing.Point(220, 75);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(962, 9);
+            this.panelShadow.TabIndex = 3;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 84);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(962, 539);
+            this.panelDesktop.TabIndex = 4;
+            // 
+            // lblTitleChildForm
+            // 
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(44, 41);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(95, 25);
+            this.lblTitleChildForm.TabIndex = 0;
+            this.lblTitleChildForm.Text = "Welcome";
+            // 
+            // btn_close
+            // 
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_close.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btn_close.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_close.Location = new System.Drawing.Point(906, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(56, 75);
+            this.btn_close.TabIndex = 1;
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // mainLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 623);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelShadow);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.MinimumSize = new System.Drawing.Size(1200, 670);
             this.Name = "mainLayout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mainLayout";
             this.Load += new System.EventHandler(this.mainLayout_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox_user)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,7 +320,13 @@
         private FontAwesome.Sharp.IconButton btn_history;
         private FontAwesome.Sharp.IconButton btn_logMeal;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox_user;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_username;
         private FontAwesome.Sharp.IconButton btn_editProfile;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Label lbl_logout;
+        private System.Windows.Forms.Panel panelShadow;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Label lblTitleChildForm;
+        private FontAwesome.Sharp.IconButton btn_close;
     }
 }

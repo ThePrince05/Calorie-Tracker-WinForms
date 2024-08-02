@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addUser));
             this.txt_name = new System.Windows.Forms.TextBox();
             this.lbl_userName = new System.Windows.Forms.Label();
             this.txt_userHeight = new System.Windows.Forms.TextBox();
@@ -44,8 +43,8 @@
             this.lbl_surname = new System.Windows.Forms.Label();
             this.lbl_age = new System.Windows.Forms.Label();
             this.txt_age = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_name
@@ -59,7 +58,7 @@
             // 
             this.lbl_userName.AutoSize = true;
             this.lbl_userName.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_userName.ForeColor = System.Drawing.Color.Black;
+            this.lbl_userName.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_userName.Location = new System.Drawing.Point(98, 184);
             this.lbl_userName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userName.Name = "lbl_userName";
@@ -80,7 +79,7 @@
             // 
             this.lbl_userHeight.AutoSize = true;
             this.lbl_userHeight.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_userHeight.ForeColor = System.Drawing.Color.Black;
+            this.lbl_userHeight.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_userHeight.Location = new System.Drawing.Point(98, 388);
             this.lbl_userHeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userHeight.Name = "lbl_userHeight";
@@ -101,7 +100,7 @@
             // 
             this.lbl_userWeight.AutoSize = true;
             this.lbl_userWeight.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_userWeight.ForeColor = System.Drawing.Color.Black;
+            this.lbl_userWeight.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_userWeight.Location = new System.Drawing.Point(422, 389);
             this.lbl_userWeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userWeight.Name = "lbl_userWeight";
@@ -114,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(98, 282);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -139,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
             this.label2.Location = new System.Drawing.Point(249, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -178,7 +177,7 @@
             // 
             this.lbl_surname.AutoSize = true;
             this.lbl_surname.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_surname.ForeColor = System.Drawing.Color.Black;
+            this.lbl_surname.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_surname.Location = new System.Drawing.Point(422, 184);
             this.lbl_surname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_surname.Name = "lbl_surname";
@@ -191,7 +190,7 @@
             // 
             this.lbl_age.AutoSize = true;
             this.lbl_age.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.ForeColor = System.Drawing.Color.Black;
+            this.lbl_age.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_age.Location = new System.Drawing.Point(422, 282);
             this.lbl_age.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_age.Name = "lbl_age";
@@ -208,24 +207,28 @@
             this.txt_age.TabIndex = 17;
             this.txt_age.TextChanged += new System.EventHandler(this.txt_age_TextChanged);
             // 
-            // pictureBox1
+            // iconPictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(310, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 114;
+            this.iconPictureBox1.Location = new System.Drawing.Point(343, 57);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(123, 114);
+            this.iconPictureBox1.TabIndex = 58;
+            this.iconPictureBox1.TabStop = false;
             // 
             // addUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(793, 563);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.txt_age);
             this.Controls.Add(this.lbl_age);
             this.Controls.Add(this.txt_surname);
@@ -247,10 +250,10 @@
             this.MinimumSize = new System.Drawing.Size(643, 610);
             this.Name = "addUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addUser";
+            this.Text = "Add User";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.addUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +276,6 @@
         private System.Windows.Forms.Label lbl_surname;
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.TextBox txt_age;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

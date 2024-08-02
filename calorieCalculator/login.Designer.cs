@@ -34,25 +34,25 @@
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_createUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox_username = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Name = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_userName
             // 
             resources.ApplyResources(this.lbl_userName, "lbl_userName");
-            this.lbl_userName.ForeColor = System.Drawing.Color.Black;
+            this.lbl_userName.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_userName.Name = "lbl_userName";
             this.lbl_userName.Click += new System.EventHandler(this.lbl_userName_Click);
             // 
@@ -66,7 +66,7 @@
             // lbl_createUser
             // 
             resources.ApplyResources(this.lbl_createUser, "lbl_createUser");
-            this.lbl_createUser.ForeColor = System.Drawing.Color.Black;
+            this.lbl_createUser.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_createUser.Name = "lbl_createUser";
             this.lbl_createUser.Click += new System.EventHandler(this.lbl_createUser_Click);
             this.lbl_createUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbl_createUser_MouseClick);
@@ -82,12 +82,6 @@
             this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // comboBox_username
             // 
             this.comboBox_username.FormattingEnabled = true;
@@ -95,21 +89,39 @@
             this.comboBox_username.Name = "comboBox_username";
             this.comboBox_username.SelectedIndexChanged += new System.EventHandler(this.comboBox_username_SelectedIndexChanged);
             // 
-            // pictureBox2
+            // iconPictureBox1
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 76;
+            resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 34;
+            resources.ApplyResources(this.iconPictureBox2, "iconPictureBox2");
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.Controls.Add(this.pictureBox2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.Controls.Add(this.iconPictureBox2);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.comboBox_username);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.lbl_userName);
@@ -120,8 +132,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,9 +146,9 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_createUser;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox_username;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }
 

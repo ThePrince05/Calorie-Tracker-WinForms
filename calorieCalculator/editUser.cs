@@ -439,5 +439,45 @@ namespace calorieCalculator
         {
             
         }
+
+        private void txt_currentHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_gender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentGender_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentSurname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentWeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentCalories_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
