@@ -238,7 +238,7 @@
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // addFood
+            // manageFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,7 +261,7 @@
             this.Controls.Add(this.DGV_manageFood);
             this.Controls.Add(this.lbl_manageFood);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.Name = "addFood";
+            this.Name = "manageFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addFood";
             this.Load += new System.EventHandler(this.addFood_Load);
