@@ -24,7 +24,7 @@ namespace calorieCalculator
         //kilojoules calculator
         internal int KilojoulesToCalories(double kilojoules)
         {
-            int calories = Convert.ToInt32(kilojoules * 0.239);
+            int calories = Convert.ToInt32(Math.Round(kilojoules * 0.239));
             return calories;
         }
 

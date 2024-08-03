@@ -485,9 +485,12 @@ namespace calorieCalculator
                     else 
                     { 
                         
-                        int quantity = Convert.ToInt32(txt_quantity.Text);
-                        int caloriesPerGram = caloriesPerHundred / 100;
-                        caloriesInServing = caloriesPerGram * quantity;
+                       int quantity = Convert.ToInt32(txt_quantity.Text);
+                        //long caloriesTotal = (caloriesPerHundred / 100) * quantity;
+                        //caloriesInServing = Convert.ToInt32(caloriesTotal);
+
+                        double totalCalories = (caloriesPerHundred / 100.0) * quantity;
+                        caloriesInServing = Convert.ToInt32(Math.Round(totalCalories));
                     }
 
                         string userName = Database.GlobalVariables.currentUser;
