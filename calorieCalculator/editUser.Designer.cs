@@ -451,6 +451,7 @@
             this.Controls.Add(this.lbl_currentName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "editUser";
             this.Padding = new System.Windows.Forms.Padding(100, 50, 100, 50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

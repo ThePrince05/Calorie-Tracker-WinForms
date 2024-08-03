@@ -19,8 +19,9 @@ namespace calorieCalculator
         public Login()
         {
             InitializeComponent();
-            PopulateComboBox();
             database.CreateDatabaseAndTables();
+            PopulateComboBox();
+            
         }
         public static class GlobalVariables
         {
@@ -89,7 +90,7 @@ namespace calorieCalculator
             catch(Exception ex)
             {
 
-                MessageBox.Show( "Opps, something went wrong on: " + ex.Message);
+               // MessageBox.Show( "Opps, something went wrong on: " + ex.Message);
             }
         }
 

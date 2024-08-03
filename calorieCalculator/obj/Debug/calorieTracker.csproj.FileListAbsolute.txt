@@ -39,3 +39,7 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debu
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieT.EED7F710.Up2Date
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.history.resources
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.dashboard.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\calorieCalculator.exe.manifest
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\calorieCalculator.application
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.exe.manifest
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.application
