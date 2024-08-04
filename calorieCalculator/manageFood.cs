@@ -200,7 +200,33 @@ namespace calorieCalculator
             txt_calories.Clear();
             radioButton_calories.Checked = false;
             radioButton_kilojoules.Checked = false;
-        } 
+        }
+        private void filterDataGridViewByFoodName(string foodName)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "SELECT FoodID, FoodName, Calories FROM Foods";
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        DataView dv = new DataView(dt);
+                        dv.RowFilter = $"FoodName LIKE '%{foodName}%'";
+                        DGV_manageFood.DataSource = dv;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+            }
+        }
         private void btn_clear_Click(object sender, EventArgs e)
         {
             clearFields();
@@ -316,6 +342,32 @@ namespace calorieCalculator
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            int validation = 0;
+            if (txt_search.Text == "" || txt_search.Text.Length < 3)
+            {
+                validation = 1;
+                txt_search.BackColor = Color.Red;
+                MessageBox.Show("Enter a food name that it at least three characters long.");
+            }
+            else
+            {
+                txt_search.BackColor = Color.White;
+                validation = 0;
+            }
+
+            if (validation == 0)
+            {
+                filterDataGridViewByFoodName(txt_search.Text);
+            }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            PopulateDataGridView();
         }
     }
 }

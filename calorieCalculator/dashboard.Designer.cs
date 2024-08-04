@@ -184,6 +184,7 @@
             this.lbl_bender.Size = new System.Drawing.Size(49, 34);
             this.lbl_bender.TabIndex = 81;
             this.lbl_bender.Text = "??";
+            this.lbl_bender.Click += new System.EventHandler(this.lbl_bender_Click);
             // 
             // dashboard
             // 

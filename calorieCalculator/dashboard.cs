@@ -32,15 +32,29 @@ namespace calorieCalculator
 
             
             int remaining = targetCalories - foodTotal;
+            string gender = Database.GlobalVariables.gender;
 
-            if (remaining <=0) { 
+            if (remaining <= 0 && gender.Contains("Female")) {
                 lbl_bender.Text = "Slow down, little missy.";
                 lbl_bender.ForeColor = Color.Red;
             }
+            else if (remaining <= 0 && gender.Contains("Male")) {
+                lbl_bender.Text = "Slow down, fatso.";
+                lbl_bender.ForeColor = Color.Red;
+            }
+            else if (remaining > 0 && gender.Contains("Male"))
+            {
+                lbl_bender.Text = "Keep going, my dude.";
+                lbl_bender.ForeColor = Color.LightGreen;
+            }
+            else if (remaining > 0 && gender.Contains("Female"))
+            {
+                lbl_bender.Text = "Keep going, Girl.";
+                lbl_bender.ForeColor = Color.LightGreen;
+            }
             else
             {
-                lbl_bender.Text = "You go, Girl.";
-                lbl_bender.ForeColor = Color.LightGreen;
+                lbl_bender.Text = "I don't know what gender you are, but I like you anyway.";
             }
 
             lbl_remaining.Text = remaining.ToString();
@@ -155,6 +169,11 @@ namespace calorieCalculator
 
         }
         private void dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_bender_Click(object sender, EventArgs e)
         {
 
         }

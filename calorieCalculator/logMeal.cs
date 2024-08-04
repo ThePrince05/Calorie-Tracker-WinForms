@@ -70,7 +70,7 @@ namespace calorieCalculator
         private void clearFields() {
             txt_foodName.Clear();
             txt_quantity.Clear();
-            checkBox_fruit.Checked = false;
+            checkBox_serving.Checked = false;
         }
 
         Database database = new Database();
@@ -478,7 +478,7 @@ namespace calorieCalculator
                 if (validateForm() == true)
                 {
 
-                    if (checkBox_fruit.Checked == true)
+                    if (checkBox_serving.Checked == true)
                     {
                         caloriesInServing = Convert.ToInt32(txt_quantity.Text) * caloriesPerHundred;
                     }

@@ -72,7 +72,7 @@
             // 
             // btn_editProfile
             // 
-            this.btn_editProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_editProfile.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_editProfile.FlatAppearance.BorderSize = 0;
             this.btn_editProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editProfile.ForeColor = System.Drawing.Color.Gainsboro;
@@ -81,10 +81,10 @@
             this.btn_editProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_editProfile.IconSize = 39;
             this.btn_editProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editProfile.Location = new System.Drawing.Point(0, 548);
+            this.btn_editProfile.Location = new System.Drawing.Point(0, 553);
             this.btn_editProfile.Name = "btn_editProfile";
             this.btn_editProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_editProfile.Size = new System.Drawing.Size(220, 75);
+            this.btn_editProfile.Size = new System.Drawing.Size(220, 70);
             this.btn_editProfile.TabIndex = 6;
             this.btn_editProfile.Text = "Edit Profile";
             this.btn_editProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,8 +94,7 @@
             // 
             // btn_manageFood
             // 
-            this.btn_manageFood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_manageFood.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_manageFood.FlatAppearance.BorderSize = 0;
             this.btn_manageFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manageFood.ForeColor = System.Drawing.Color.Gainsboro;
@@ -104,10 +103,10 @@
             this.btn_manageFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_manageFood.IconSize = 32;
             this.btn_manageFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manageFood.Location = new System.Drawing.Point(0, 409);
+            this.btn_manageFood.Location = new System.Drawing.Point(0, 372);
             this.btn_manageFood.Name = "btn_manageFood";
             this.btn_manageFood.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_manageFood.Size = new System.Drawing.Size(220, 74);
+            this.btn_manageFood.Size = new System.Drawing.Size(220, 70);
             this.btn_manageFood.TabIndex = 5;
             this.btn_manageFood.Text = "Manage Food";
             this.btn_manageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,8 +116,7 @@
             // 
             // btn_history
             // 
-            this.btn_history.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_history.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_history.FlatAppearance.BorderSize = 0;
             this.btn_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_history.ForeColor = System.Drawing.Color.Gainsboro;
@@ -127,10 +125,10 @@
             this.btn_history.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_history.IconSize = 32;
             this.btn_history.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_history.Location = new System.Drawing.Point(0, 329);
+            this.btn_history.Location = new System.Drawing.Point(0, 302);
             this.btn_history.Name = "btn_history";
             this.btn_history.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_history.Size = new System.Drawing.Size(220, 74);
+            this.btn_history.Size = new System.Drawing.Size(220, 70);
             this.btn_history.TabIndex = 4;
             this.btn_history.Text = "History";
             this.btn_history.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,8 +138,7 @@
             // 
             // btn_logMeal
             // 
-            this.btn_logMeal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_logMeal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_logMeal.FlatAppearance.BorderSize = 0;
             this.btn_logMeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logMeal.ForeColor = System.Drawing.Color.Gainsboro;
@@ -150,7 +147,7 @@
             this.btn_logMeal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_logMeal.IconSize = 32;
             this.btn_logMeal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logMeal.Location = new System.Drawing.Point(0, 242);
+            this.btn_logMeal.Location = new System.Drawing.Point(0, 232);
             this.btn_logMeal.Name = "btn_logMeal";
             this.btn_logMeal.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_logMeal.Size = new System.Drawing.Size(220, 70);
@@ -163,8 +160,7 @@
             // 
             // btn_dashboard
             // 
-            this.btn_dashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_dashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_dashboard.FlatAppearance.BorderSize = 0;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.ForeColor = System.Drawing.Color.Gainsboro;
@@ -176,7 +172,7 @@
             this.btn_dashboard.Location = new System.Drawing.Point(0, 162);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_dashboard.Size = new System.Drawing.Size(220, 74);
+            this.btn_dashboard.Size = new System.Drawing.Size(220, 70);
             this.btn_dashboard.TabIndex = 2;
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

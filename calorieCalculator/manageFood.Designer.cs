@@ -45,6 +45,10 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_manageFood)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -122,9 +126,9 @@
             this.lbl_calories.Location = new System.Drawing.Point(91, 515);
             this.lbl_calories.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_calories.Name = "lbl_calories";
-            this.lbl_calories.Size = new System.Drawing.Size(164, 28);
+            this.lbl_calories.Size = new System.Drawing.Size(325, 28);
             this.lbl_calories.TabIndex = 22;
-            this.lbl_calories.Text = "Per 100 grams";
+            this.lbl_calories.Text = "Per 100 grams or Per Serving";
             // 
             // btn_save
             // 
@@ -244,13 +248,64 @@
             this.iconPictureBox1.TabIndex = 57;
             this.iconPictureBox1.TabStop = false;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.Black;
+            this.btn_cancel.Location = new System.Drawing.Point(1010, 386);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(137, 41);
+            this.btn_cancel.TabIndex = 86;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_search
+            // 
+            this.btn_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.ForeColor = System.Drawing.Color.Black;
+            this.btn_search.Location = new System.Drawing.Point(1010, 339);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(137, 41);
+            this.btn_search.TabIndex = 85;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(1010, 284);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(161, 31);
+            this.txt_search.TabIndex = 84;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(1005, 253);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 28);
+            this.label11.TabIndex = 83;
+            this.label11.Text = "Search";
+            // 
             // manageFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1044, 767);
+            this.ClientSize = new System.Drawing.Size(1200, 767);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_delete);
@@ -300,5 +355,9 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label11;
     }
 }

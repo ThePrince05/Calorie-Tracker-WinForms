@@ -60,6 +60,38 @@ namespace calorieCalculator
             }
         }
 
+        private void getGender(string username)
+        {
+            try
+            {
+                string databasePath = database.GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "SELECT Gender FROM Users WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            Database.GlobalVariables.gender = result.ToString();
+                            //MessageBox.Show(Database.GlobalVariables.gender);
+                        }
+                        else
+                        {
+                            Database.GlobalVariables.gender = "Unknown";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+            }
+        }
 
         Database database = new Database();
 
@@ -174,6 +206,7 @@ namespace calorieCalculator
             {
                 Database.GlobalVariables.currentUser = comboBox_username.SelectedItem.ToString();
                 getTargetCalories(comboBox_username.SelectedItem.ToString());
+                getGender(comboBox_username.SelectedItem.ToString());
                 this.Hide();
                 
                 Form form = new mainLayout();

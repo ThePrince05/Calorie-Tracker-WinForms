@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="calorieCalculator.exe" size="211472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="calorieCalculator.exe" size="235024">
       <assemblyIdentity name="calorieCalculator" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xCPltEY4sFI3OO+i2azjroGZ4AR7zZ/FRg67JPyQuvc=</dsig:DigestValue>
+        <dsig:DigestValue>mIxszlatqQdW50xGSGJiM9yXtRvkelSt3Aa8PtxY4OY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qtfLaDPulNHEbCF5H7t8TzptNHOxSE8Vob9zStXT0Zk=</dsig:DigestValue>
+        <dsig:DigestValue>CuKZRldTio2CvxNGT+lUwwyPyfJpFUuC4DENDLv0fCM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

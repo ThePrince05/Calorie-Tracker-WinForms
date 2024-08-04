@@ -43,3 +43,4 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Rele
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieT.EED7F710.Up2Date
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.exe
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.pdb
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.splashScreen.resources

@@ -20,6 +20,7 @@ namespace calorieCalculator
         {
             internal static string currentUser { get; set; }
             internal static int targetCalories { get; set; }
+            internal static string gender { get; set; }
         }
         internal string generateUsername(string firstname) {
 
