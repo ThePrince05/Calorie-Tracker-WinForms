@@ -480,7 +480,9 @@ namespace calorieCalculator
 
                     if (checkBox_serving.Checked == true)
                     {
-                        caloriesInServing = Convert.ToInt32(txt_quantity.Text) * caloriesPerHundred;
+                        double userInput = Math.Round(Convert.ToDouble(txt_quantity.Text) * caloriesPerHundred); 
+
+                        caloriesInServing = Convert.ToInt32(userInput);
                     }
                     else 
                     { 
