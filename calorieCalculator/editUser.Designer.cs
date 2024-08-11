@@ -83,6 +83,7 @@
             this.txt_currentAge.ReadOnly = true;
             this.txt_currentAge.Size = new System.Drawing.Size(227, 31);
             this.txt_currentAge.TabIndex = 29;
+            this.txt_currentAge.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentAge_MouseClick);
             this.txt_currentAge.TextChanged += new System.EventHandler(this.txt_currentAge_TextChanged);
             // 
             // lbl_currentAge
@@ -105,6 +106,7 @@
             this.txt_currentSurname.ReadOnly = true;
             this.txt_currentSurname.Size = new System.Drawing.Size(227, 31);
             this.txt_currentSurname.TabIndex = 27;
+            this.txt_currentSurname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentSurname_MouseClick);
             this.txt_currentSurname.TextChanged += new System.EventHandler(this.txt_currentSurname_TextChanged);
             // 
             // lbl_currentSurname
@@ -139,6 +141,7 @@
             this.txt_currentWeight.ReadOnly = true;
             this.txt_currentWeight.Size = new System.Drawing.Size(227, 31);
             this.txt_currentWeight.TabIndex = 23;
+            this.txt_currentWeight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentWeight_MouseClick);
             this.txt_currentWeight.TextChanged += new System.EventHandler(this.txt_currentWeight_TextChanged);
             // 
             // lbl_currentWeight
@@ -161,6 +164,7 @@
             this.txt_currentHeight.ReadOnly = true;
             this.txt_currentHeight.Size = new System.Drawing.Size(227, 31);
             this.txt_currentHeight.TabIndex = 21;
+            this.txt_currentHeight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentHeight_MouseClick);
             this.txt_currentHeight.TextChanged += new System.EventHandler(this.txt_currentHeight_TextChanged);
             // 
             // lbl_currentHeight
@@ -183,6 +187,7 @@
             this.txt_currentName.ReadOnly = true;
             this.txt_currentName.Size = new System.Drawing.Size(227, 31);
             this.txt_currentName.TabIndex = 19;
+            this.txt_currentName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentName_MouseClick);
             this.txt_currentName.TextChanged += new System.EventHandler(this.txt_currentName_TextChanged);
             // 
             // lbl_currentName
@@ -205,6 +210,7 @@
             this.txt_currentCalories.ReadOnly = true;
             this.txt_currentCalories.Size = new System.Drawing.Size(227, 31);
             this.txt_currentCalories.TabIndex = 31;
+            this.txt_currentCalories.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentCalories_MouseClick);
             this.txt_currentCalories.TextChanged += new System.EventHandler(this.txt_currentCalories_TextChanged);
             // 
             // lbl_currentCalories
@@ -227,6 +233,7 @@
             this.txt_currentGender.ReadOnly = true;
             this.txt_currentGender.Size = new System.Drawing.Size(227, 31);
             this.txt_currentGender.TabIndex = 32;
+            this.txt_currentGender.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_currentGender_MouseClick);
             this.txt_currentGender.TextChanged += new System.EventHandler(this.txt_currentGender_TextChanged);
             // 
             // txt_calories

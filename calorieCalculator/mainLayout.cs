@@ -25,7 +25,7 @@ namespace calorieCalculator
           
  
             InitializeComponent();
-            lbl_username.Text = Database.GlobalVariables.currentUser;
+            lbl_username.Text = Database.GlobalVariables.CurrentUser;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,60);
             panelMenu.Controls.Add(leftBorderBtn);

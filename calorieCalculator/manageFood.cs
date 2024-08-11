@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -190,7 +191,7 @@ namespace calorieCalculator
                 }
             }
             catch (Exception ex) { 
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
 
             }
@@ -200,6 +201,8 @@ namespace calorieCalculator
             txt_calories.Clear();
             radioButton_calories.Checked = false;
             radioButton_kilojoules.Checked = false;
+            checkBox_serving.Checked = false;
+            
         }
         private void filterDataGridViewByFoodName(string foodName)
         {
@@ -215,8 +218,10 @@ namespace calorieCalculator
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
-                        DataView dv = new DataView(dt);
-                        dv.RowFilter = $"FoodName LIKE '%{foodName}%'";
+                        DataView dv = new DataView(dt)
+                        {
+                            RowFilter = $"FoodName LIKE '%{foodName}%'"
+                        };
                         DGV_manageFood.DataSource = dv;
 
                     }
@@ -224,12 +229,57 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
         private void btn_clear_Click(object sender, EventArgs e)
         {
             clearFields();
+        }
+        private void WriteServingToFile(string foodName)
+        {
+
+            try
+            {
+                // text document directory
+                string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string filePath = Path.Combine(appDataPath, "Calorie Tracker", "isServing.txt");
+
+                // Create the directory if it doesn't exist
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+
+                List<String> existingServings = new List<String>();
+                if (File.Exists(filePath))
+                {
+                    existingServings = File.ReadAllLines(filePath).ToList();
+                }
+
+                List<string> uniqueServing = new List<string>();
+
+                
+                if (!existingServings.Contains(foodName))
+                {
+                    uniqueServing.Add(foodName);
+                    
+                }
+
+
+                // Write numbers to the text file
+                // Append numbers to the text file
+                using (StreamWriter writer = File.AppendText(filePath))
+                {
+                    foreach (string name in uniqueServing)
+                    {
+                        writer.WriteLine(name);
+                    }
+
+                    
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Ops, Something went wrong on: " + ex.Message);
+            }
+
         }
 
         private void txt_calories_TextChanged(object sender, EventArgs e)
@@ -257,7 +307,11 @@ namespace calorieCalculator
                         calories = Convert.ToInt32(txt_calories.Text);
                     }
 
-                    database.insertFood(foodName, calories);
+                    if (checkBox_serving.Checked) {
+                        WriteServingToFile(foodName);
+                    }
+
+                    database.InsertFood(foodName, calories);
                     PopulateDataGridView();
                     clearFields();
                 }
@@ -291,7 +345,7 @@ namespace calorieCalculator
             if (!(txt_foodID.Text == ""))
             {
                 int foodID = Convert.ToInt32(txt_foodID.Text);
-                database.deleteFood(foodID);
+                database.DeleteFood(foodID);
                 PopulateDataGridView();
                 clearFields();
             }
@@ -323,7 +377,12 @@ namespace calorieCalculator
                         calories = Convert.ToInt32(txt_calories.Text);
                     }
 
-                    database.updateFood(foodID, foodName, calories);
+                    if (checkBox_serving.Checked)
+                    {
+                        WriteServingToFile(foodName);
+                    }
+
+                    database.UpdateFood(foodID, foodName, calories);
                     PopulateDataGridView();
                     clearFields();
                 }
@@ -346,7 +405,7 @@ namespace calorieCalculator
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            int validation = 0;
+            int validation;
             if (txt_search.Text == "" || txt_search.Text.Length < 3)
             {
                 validation = 1;

@@ -17,7 +17,7 @@ namespace calorieCalculator
         {
             InitializeComponent();
         }
-        private void clearFields() {
+        private void ClearFields() {
             txt_name.Clear();
             txt_surname.Clear();
             txt_age.Clear();
@@ -25,7 +25,7 @@ namespace calorieCalculator
             txt_userWeight.Clear();
         }
 
-        private int caloriesIntake(int age, double height, double weight, string gender) {
+        private int CaloriesIntake(int age, double height, double weight, string gender) {
             int calories = 0;
             
             if (gender.Contains("Female"))
@@ -43,9 +43,8 @@ namespace calorieCalculator
 
             return calories;
         }
-        private bool validateForm()
+        private bool ValidateForm()
         {
-            int invalidcount = 0;
             int namelengthcount = 0;
             int nameblankcount = 0;
 
@@ -91,7 +90,7 @@ namespace calorieCalculator
                 }
                 else
                 {
-                    nameblankcount = nameblankcount + 1;
+                    nameblankcount++;
                     txt_name.Text = "Name can't be blank.";
 
                 }
@@ -311,9 +310,9 @@ namespace calorieCalculator
                 }
 
 
-            invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + ageblankcount + agenumbercount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount;
+            int invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + ageblankcount + agenumbercount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount;
 
-                if (invalidcount == 0)
+            if (invalidcount == 0)
                 {
                     return true;
                 }
@@ -326,7 +325,7 @@ namespace calorieCalculator
          
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            clearFields();
+            ClearFields();
         }
 
         private void btn_enter_Click(object sender, EventArgs e)
@@ -335,26 +334,26 @@ namespace calorieCalculator
             {
                 Database database = new Database();
 
-                if (validateForm() == true)
+                if (ValidateForm() == true)
                 {
 
-                    string Username = database.generateUsername(txt_name.Text);
+                    string Username = database.GenerateUsername(txt_name.Text);
                     string Name = txt_name.Text;
                     string Surname = txt_surname.Text;
                     string Gender = comboBox_gender.SelectedItem.ToString();
                     int Age = Convert.ToInt32(txt_age.Text);
                     double Height = Convert.ToDouble(txt_userHeight.Text);
                     double Weight = Convert.ToDouble(txt_userWeight.Text);
-                    int TargetCalories = caloriesIntake(Age, Height, Weight, Gender);
+                    int TargetCalories = CaloriesIntake(Age, Height, Weight, Gender);
 
 
-                    database.insertUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
-                    clearFields();
+                    database.InsertUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
+                    ClearFields();
 
                     this.Close();
                 }
             } catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
 

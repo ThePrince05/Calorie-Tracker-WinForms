@@ -18,9 +18,9 @@ namespace calorieCalculator
         public editUser()
         {
             InitializeComponent();
-            DisplayUserInfo(Database.GlobalVariables.currentUser);
+            DisplayUserInfo(Database.GlobalVariables.CurrentUser);
         }
-        Database database = new Database();
+        readonly Database database = new Database();
 
         private void DisplayUserInfo(string username)
         {
@@ -52,12 +52,12 @@ namespace calorieCalculator
                 }
             }
             catch (Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
 
         
-        private void clearFields() {
+        private void ClearFields() {
             txt_name.Clear();
             txt_surname.Clear();
             txt_age.Clear();
@@ -67,9 +67,8 @@ namespace calorieCalculator
 
         }
         //validation
-        private bool validateForm()
+        private bool ValidateForm()
         {
-            int invalidcount = 0;
             int namelengthcount = 0;
             int nameblankcount = 0;
 
@@ -118,7 +117,7 @@ namespace calorieCalculator
             }
             else
             {
-                nameblankcount = nameblankcount + 1;
+                nameblankcount++;
                 txt_name.Text = "Name can't be blank.";
 
             }
@@ -383,7 +382,7 @@ namespace calorieCalculator
             }
 
 
-            invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + ageblankcount + agenumbercount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount + caloriesblankcount + caloriesnumbercount;
+            int invalidcount = namelengthcount + nameblankcount + surnamelengthcount + surnameblankcount + combocount + ageblankcount + agenumbercount + heightblankcount + heightnumbercount + weightblankcount + weightnumbercount + caloriesblankcount + caloriesnumbercount;
 
             if (invalidcount == 0)
             {
@@ -407,17 +406,17 @@ namespace calorieCalculator
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            clearFields();
+            ClearFields();
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
             try
             {
-                if (validateForm() == true)
+                if (ValidateForm() == true)
                 {
 
-                    string Username = Database.GlobalVariables.currentUser;
+                    string Username = Database.GlobalVariables.CurrentUser;
                     string Name = txt_name.Text;
                     string Surname = txt_surname.Text;
                     string Gender = comboBox_gender.SelectedItem.ToString();
@@ -427,11 +426,11 @@ namespace calorieCalculator
                     int TargetCalories = Convert.ToInt32(txt_calories.Text);
 
 
-                    database.updateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
+                    database.UpdateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
                 }
             } 
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);    
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);    
             }
         }
 
@@ -478,6 +477,41 @@ namespace calorieCalculator
         private void txt_currentCalories_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_currentName_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_name.Text = txt_currentName.Text;
+        }
+
+        private void txt_currentSurname_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_surname.Text = txt_currentSurname.Text;
+        }
+
+        private void txt_currentAge_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_age.Text = txt_currentAge.Text;
+        }
+
+        private void txt_currentGender_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void txt_currentHeight_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_userHeight.Text = txt_currentHeight.Text;
+        }
+
+        private void txt_currentWeight_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_userWeight.Text = txt_currentWeight.Text;
+        }
+
+        private void txt_currentCalories_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_calories.Text = txt_currentCalories.Text;
         }
     }
 }

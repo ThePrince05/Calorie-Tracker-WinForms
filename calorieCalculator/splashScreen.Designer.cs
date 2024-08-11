@@ -44,9 +44,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(210)))), ((int)(((byte)(145)))));
-            this.panel1.Location = new System.Drawing.Point(2, 329);
+            this.panel1.Location = new System.Drawing.Point(-5, 329);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(102, 17);
+            this.panel1.Size = new System.Drawing.Size(109, 17);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -62,7 +62,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(131, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 39);
+            this.label1.Size = new System.Drawing.Size(314, 38);
             this.label1.TabIndex = 4;
             this.label1.Text = "Calorie Tracker 1.0";
             // 
@@ -124,6 +124,7 @@
             this.Name = "splashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash Screen";
+            this.Load += new System.EventHandler(this.splashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);

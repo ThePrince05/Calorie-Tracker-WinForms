@@ -18,11 +18,12 @@ namespace calorieCalculator
 
         internal static class GlobalVariables
         {
-            internal static string currentUser { get; set; }
-            internal static int targetCalories { get; set; }
-            internal static string gender { get; set; }
+            internal static string CurrentUser { get; set; }
+            internal static int TargetCalories { get; set; }
+            internal static string Gender { get; set; }
+           
         }
-        internal string generateUsername(string firstname) {
+        internal string GenerateUsername(string firstname) {
 
             int count = 1; // Number of unique numbers to generate
 
@@ -142,7 +143,7 @@ namespace calorieCalculator
                 // MessageBox.Show("Database already exists.");
             }
         }
-        internal void insertUser(string username, string name,string surname, string gender, int age, double height, double weight, int targetCalories) {
+        internal void InsertUser(string username, string name,string surname, string gender, int age, double height, double weight, int targetCalories) {
             try
             {
                 string databasePath = GetDatabasePath();
@@ -169,10 +170,10 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
-        internal void insertFood(string foodName, int calories)
+        internal void InsertFood(string foodName, int calories)
         {
             try
             {
@@ -201,10 +202,10 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
-        internal void insertMeal(string username, string foodName, string mealType, string date, string time, int caloriesInServing)
+        internal void InsertMeal(string username, string foodName, string mealType, string date, string time, int caloriesInServing)
         {
             try
             {
@@ -229,7 +230,7 @@ namespace calorieCalculator
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Meal logged successfully");
+                            MessageBox.Show("Meal logged");
                         }
                         else
                         {
@@ -239,10 +240,10 @@ namespace calorieCalculator
                 }
             }
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        internal void deleteFood(int foodId)
+        internal void DeleteFood(int foodId)
         {
             try
             {
@@ -270,11 +271,11 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
 
-        internal void updateFood(int foodId, string foodName, int calories)
+        internal void UpdateFood(int foodId, string foodName, int calories)
         {
             try
             {
@@ -303,11 +304,11 @@ namespace calorieCalculator
                 }
             }
             catch (Exception ex) { 
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
 
-        internal void updateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
+        internal void UpdateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
         {
             try
             {
@@ -341,7 +342,7 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
 
         }

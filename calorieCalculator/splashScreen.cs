@@ -21,12 +21,17 @@ namespace calorieCalculator
         {
             panel1.Width += 3;
 
-            if (panel1.Width >= 599) { 
+            if (panel1.Width >= 602) { 
                 timer1.Stop();
                 Form login = new Login();
                 login.Show();
                 this.Hide();
             }
+        }
+
+        private void splashScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

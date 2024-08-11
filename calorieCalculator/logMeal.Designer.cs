@@ -102,6 +102,7 @@
             this.txt_foodName.ReadOnly = true;
             this.txt_foodName.Size = new System.Drawing.Size(291, 31);
             this.txt_foodName.TabIndex = 23;
+            this.txt_foodName.TextChanged += new System.EventHandler(this.txt_foodName_TextChanged);
             // 
             // lbl_foodName
             // 

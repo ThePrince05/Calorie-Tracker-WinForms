@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -24,25 +25,25 @@ namespace calorieCalculator
         {
             InitializeComponent();
             PopulateDataGridView();
-            populateDGVBreakfast();
-            populateDGVLunch();
-            populateDGVDinner();
-            mealTotal();
-            setCalorieLabels();
+            PopulateDGVBreakfast();
+            PopulateDGVLunch();
+            PopulateDGVDinner();
+            MealTotal();
+            SetCalorieLabels();
         }
 
-        private void setCalorieLabels() {
-            int targetCalories = Database.GlobalVariables.targetCalories;
+        private void SetCalorieLabels() {
+            int targetCalories = Database.GlobalVariables.TargetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
-            string username = Database.GlobalVariables.currentUser;
-            int foodTotal = totalBreakfastCalories(username) + totalLunchCalories(username) + totalDinnerCalories(username);
+            string username = Database.GlobalVariables.CurrentUser;
+            int foodTotal = TotalBreakfastCalories(username) + TotalLunchCalories(username) + TotalDinnerCalories(username);
             lbl_food.Text = foodTotal.ToString();
 
             int remaining = targetCalories - foodTotal;
             lbl_remaining.Text = remaining.ToString();
         }
-        private void filterDataGridViewByFoodName(string foodName)
+        private void FilterDataGridViewByFoodName(string foodName)
         {
             try
             {
@@ -56,24 +57,27 @@ namespace calorieCalculator
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
-                        DataView dv = new DataView(dt);
-                        dv.RowFilter = $"FoodName LIKE '%{foodName}%'";
+                        DataView dv = new DataView(dt)
+                        {
+                            RowFilter = $"FoodName LIKE '%{foodName}%'"
+                        };
                         DGV_manageFood.DataSource = dv;
 
                     }
                 }
             }
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        private void clearFields() {
+        private void ClearFields() {
             txt_foodName.Clear();
             txt_quantity.Clear();
             checkBox_serving.Checked = false;
+            checkBox_serving.ForeColor = Color.Gainsboro;
         }
 
-        Database database = new Database();
+        readonly Database database = new Database();
         private void PopulateDataGridView()
         {
             try
@@ -93,10 +97,10 @@ namespace calorieCalculator
                 }
             }
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        private void populateDGVBreakfast()
+        private void PopulateDGVBreakfast()
         {
             try
             {
@@ -111,7 +115,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Breakfast");
                         cmd.Parameters.AddWithValue("@Date", today);
 
@@ -123,10 +127,10 @@ namespace calorieCalculator
                 }
             }
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        private void populateDGVLunch()
+        private void PopulateDGVLunch()
         {
             try
             {
@@ -141,7 +145,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Lunch");
                         cmd.Parameters.AddWithValue("@Date", today);
 
@@ -153,10 +157,10 @@ namespace calorieCalculator
                 }
             }
             catch(Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        private void populateDGVDinner()
+        private void PopulateDGVDinner()
         {
             try
             {
@@ -171,7 +175,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Dinner");
                         cmd.Parameters.AddWithValue("@Date", today);
 
@@ -183,12 +187,11 @@ namespace calorieCalculator
                 }
             }
             catch (Exception ex) {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
-        private bool validateForm()
+        private bool ValidateForm()
         {
-            int invalidcount = 0;
             int foodNamelengthcount = 0;
             int foodNameblankcount = 0;
 
@@ -225,7 +228,7 @@ namespace calorieCalculator
             }
             else
             {
-                foodNameblankcount = foodNameblankcount + 1;
+                foodNameblankcount ++;
                 txt_foodName.Text = "Food Name can't be blank.";
 
             }
@@ -250,7 +253,7 @@ namespace calorieCalculator
             }
 
             // is quantity blank
-            if (!((txt_quantity.Text == "") && (txt_quantity.Text == "The quanity must not be blank.")))
+            if (!((txt_quantity.Text == "") && (txt_quantity.Text == "The quantity must not be blank.")))
             {
 
                 if (quantityblankcount > 0)
@@ -309,7 +312,7 @@ namespace calorieCalculator
                 comboBox_mealType.BackColor = Color.White;
             }
 
-            invalidcount = foodNameblankcount + foodNamelengthcount + quantityblankcount + quantitynumbercount + mealtypecount;
+            int invalidcount = foodNameblankcount + foodNamelengthcount + quantityblankcount + quantitynumbercount + mealtypecount;
 
             if (invalidcount > 0)
             {
@@ -320,7 +323,7 @@ namespace calorieCalculator
             }
 
         }
-        private int totalBreakfastCalories(string username)
+        private int TotalBreakfastCalories(string username)
         {
             try
             {
@@ -350,11 +353,11 @@ namespace calorieCalculator
                 }
             }
             catch(Exception ex){
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
                 return 0;
             }
         }
-        private int totalLunchCalories(string username)
+        private int TotalLunchCalories(string username)
         {
             try
             {
@@ -386,12 +389,12 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 
         }
-        private int totalDinnerCalories(string username)
+        private int TotalDinnerCalories(string username)
         {
             try
             {
@@ -422,19 +425,19 @@ namespace calorieCalculator
             }
             catch(Exception ex){
 
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 
         }
 
-        private void mealTotal() {
-            lbl_breakfastTotal.Text = "Total - " + totalBreakfastCalories(Database.GlobalVariables.currentUser);
-            lbl_lunchTotal.Text = "Total - " + totalLunchCalories(Database.GlobalVariables.currentUser);
-            lbl_dinnerTotal.Text = "Total - " + totalDinnerCalories(Database.GlobalVariables.currentUser);
+        private void MealTotal() {
+            lbl_breakfastTotal.Text = "Total - " + TotalBreakfastCalories(Database.GlobalVariables.CurrentUser);
+            lbl_lunchTotal.Text = "Total - " + TotalLunchCalories(Database.GlobalVariables.CurrentUser);
+            lbl_dinnerTotal.Text = "Total - " + TotalDinnerCalories(Database.GlobalVariables.CurrentUser);
         }
         
-        private void deleteMeal(int mealId)
+        private void DeleteMeal(int mealId)
         {
             try
             {
@@ -462,10 +465,42 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong: " + ex.Message);
+                MessageBox.Show("Ops something went wrong: " + ex.Message);
             }
         }
+        private void ReadServingFile(string foodName)
+        {
 
+                // text document directory
+                string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string filePath = Path.Combine(appDataPath, "Calorie Tracker", "isServing.txt");
+
+              
+                List<String> existingServings = new List<String>();
+                if (File.Exists(filePath))
+                {
+                    existingServings = File.ReadAllLines(filePath).ToList();
+
+                    if (existingServings.Contains(foodName))
+                    {
+                        checkBox_serving.Enabled = true;
+                        checkBox_serving.ForeColor = Color.LightGreen;
+                        checkBox_serving.Checked = true;
+                       
+                    }
+                    else
+                    {
+                        checkBox_serving.ForeColor = Color.Gainsboro;
+                        checkBox_serving.Checked = false;
+                        checkBox_serving.Enabled = false;
+                        
+                    }
+                
+            }
+
+            
+
+        }
         private void logFood_Load(object sender, EventArgs e)
         {
 
@@ -475,27 +510,28 @@ namespace calorieCalculator
         {
             try
             {
-                if (validateForm() == true)
+                if (ValidateForm() == true)
                 {
-
-                    if (checkBox_serving.Checked == true)
+                    if (checkBox_serving.ForeColor == Color.LightGreen && checkBox_serving.Checked == false) {
+                        MessageBox.Show("Warning: It's recommended you tick the 'Is It A Serving?' checkbox for more accurate calorie calculations!!!.");
+                        caloriesInServing = 0;
+                    }
+                    
+                    else if(checkBox_serving.Checked == true)
                     {
-                        double userInput = Math.Round(Convert.ToDouble(txt_quantity.Text) * caloriesPerHundred); 
-
+                        double userInput = Math.Round(Convert.ToDouble(txt_quantity.Text) * caloriesPerHundred);
                         caloriesInServing = Convert.ToInt32(userInput);
                     }
-                    else 
-                    { 
-                        
-                       int quantity = Convert.ToInt32(txt_quantity.Text);
-                        //long caloriesTotal = (caloriesPerHundred / 100) * quantity;
-                        //caloriesInServing = Convert.ToInt32(caloriesTotal);
+
+                    else
+                    {
+                        int quantity = Convert.ToInt32(txt_quantity.Text);
 
                         double totalCalories = (caloriesPerHundred / 100.0) * quantity;
                         caloriesInServing = Convert.ToInt32(Math.Round(totalCalories));
                     }
 
-                        string userName = Database.GlobalVariables.currentUser;
+                        string userName = Database.GlobalVariables.CurrentUser;
                         string foodName = txt_foodName.Text;
                         string mealType = comboBox_mealType.SelectedItem.ToString();
                         
@@ -505,14 +541,14 @@ namespace calorieCalculator
                         DateTime timeObj = DateTime.Now;
                         string time = timeObj.ToString("HH:mm:ss");
 
-                        database.insertMeal(userName, foodName, mealType, date, time, caloriesInServing);
+                        database.InsertMeal(userName, foodName, mealType, date, time, caloriesInServing);
 
-                        clearFields();
-                        populateDGVBreakfast();
-                        populateDGVLunch();
-                        populateDGVDinner();
-                        mealTotal();
-                        setCalorieLabels();
+                        ClearFields();
+                        PopulateDGVBreakfast();
+                        PopulateDGVLunch();
+                        PopulateDGVDinner();
+                        MealTotal();
+                        SetCalorieLabels();
 
                 }
             }
@@ -530,6 +566,8 @@ namespace calorieCalculator
                 txt_foodName.Text = row.Cells["FoodName"].Value.ToString();
                 caloriesPerHundred = Convert.ToInt32(row.Cells["Calories"].Value.ToString());
             }
+            ReadServingFile(txt_foodName.Text);
+            
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -539,7 +577,7 @@ namespace calorieCalculator
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            int validation = 0;
+            int validation;
             if (txt_search.Text =="" || txt_search.Text.Length < 3) { 
                validation = 1;
                txt_search.BackColor = Color.Red;
@@ -552,7 +590,7 @@ namespace calorieCalculator
             }
 
             if (validation == 0) {
-                filterDataGridViewByFoodName(txt_search.Text);
+                FilterDataGridViewByFoodName(txt_search.Text);
             }
             
         }
@@ -601,13 +639,13 @@ namespace calorieCalculator
                 txt_mealID.BackColor = Color.White;
                 int mealID = Convert.ToInt32(txt_mealID.Text);
 
-                deleteMeal(mealID);
+                DeleteMeal(mealID);
                 txt_mealID.Clear();
-                populateDGVBreakfast();
-                populateDGVLunch();
-                populateDGVDinner();
-                mealTotal();
-                setCalorieLabels();
+                PopulateDGVBreakfast();
+                PopulateDGVLunch();
+                PopulateDGVDinner();
+                MealTotal();
+                SetCalorieLabels();
             }
         }
 
@@ -627,6 +665,11 @@ namespace calorieCalculator
         }
 
         private void lbl_breakfastTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_foodName_TextChanged(object sender, EventArgs e)
         {
 
         }

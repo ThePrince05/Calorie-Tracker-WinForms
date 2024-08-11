@@ -67,7 +67,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 623);
+            this.panelMenu.Size = new System.Drawing.Size(220, 670);
             this.panelMenu.TabIndex = 1;
             // 
             // btn_editProfile
@@ -81,7 +81,7 @@
             this.btn_editProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_editProfile.IconSize = 39;
             this.btn_editProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editProfile.Location = new System.Drawing.Point(0, 553);
+            this.btn_editProfile.Location = new System.Drawing.Point(0, 600);
             this.btn_editProfile.Name = "btn_editProfile";
             this.btn_editProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_editProfile.Size = new System.Drawing.Size(220, 70);
@@ -239,7 +239,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(962, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(980, 75);
             this.panelTitleBar.TabIndex = 2;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -252,7 +252,7 @@
             this.btn_close.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_close.IconColor = System.Drawing.Color.Gainsboro;
             this.btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_close.Location = new System.Drawing.Point(906, 0);
+            this.btn_close.Location = new System.Drawing.Point(924, 0);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(56, 75);
             this.btn_close.TabIndex = 1;
@@ -276,7 +276,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(962, 9);
+            this.panelShadow.Size = new System.Drawing.Size(980, 9);
             this.panelShadow.TabIndex = 3;
             // 
             // panelDesktop
@@ -290,7 +290,7 @@
             this.panelDesktop.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(962, 539);
+            this.panelDesktop.Size = new System.Drawing.Size(980, 586);
             this.panelDesktop.TabIndex = 4;
             // 
             // label2
@@ -328,7 +328,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(721, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(241, 326);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 373);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -343,6 +343,7 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1200, 670);
             this.Name = "mainLayout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

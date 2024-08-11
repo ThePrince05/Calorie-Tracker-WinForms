@@ -12,8 +12,7 @@ namespace calorieCalculator
         internal bool isNumber(string num) {
             try
             {
-                double number;
-                bool isNumber = double.TryParse(num, out number);
+                bool isNumber = double.TryParse(num, out double number);
                 return isNumber;
             }
             catch (FormatException)

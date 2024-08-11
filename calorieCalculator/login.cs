@@ -28,7 +28,7 @@ namespace calorieCalculator
             public static int TargetCalories { get; set; }
         }
 
-        private void getTargetCalories(string username)
+        private void GetTargetCalories(string username)
         {
             try
             {
@@ -45,22 +45,22 @@ namespace calorieCalculator
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
                         {
-                            Database.GlobalVariables.targetCalories = Convert.ToInt32(result);
+                            Database.GlobalVariables.TargetCalories = Convert.ToInt32(result);
                         }
                         else
                         {
-                            Database.GlobalVariables.targetCalories = 0;
+                            Database.GlobalVariables.TargetCalories = 0;
                         }
                     }
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
 
-        private void getGender(string username)
+        private void GetGender(string username)
         {
             try
             {
@@ -77,23 +77,23 @@ namespace calorieCalculator
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
                         {
-                            Database.GlobalVariables.gender = result.ToString();
+                            Database.GlobalVariables.Gender = result.ToString();
                             //MessageBox.Show(Database.GlobalVariables.gender);
                         }
                         else
                         {
-                            Database.GlobalVariables.gender = "Unknown";
+                            Database.GlobalVariables.Gender = "Unknown";
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops something went wrong on: " + ex.Message);
             }
         }
 
-        Database database = new Database();
+        readonly Database database = new Database();
 
         // for the username combobox
         private void PopulateComboBox()
@@ -122,7 +122,7 @@ namespace calorieCalculator
             catch(Exception ex)
             {
 
-               // MessageBox.Show( "Opps, something went wrong on: " + ex.Message);
+             MessageBox.Show( "Ops, something went wrong on: " + ex.Message);
             }
         }
 
@@ -204,13 +204,15 @@ namespace calorieCalculator
         {
             if (comboBox_username.SelectedIndex != -1)
             {
-                Database.GlobalVariables.currentUser = comboBox_username.SelectedItem.ToString();
-                getTargetCalories(comboBox_username.SelectedItem.ToString());
-                getGender(comboBox_username.SelectedItem.ToString());
+                Database.GlobalVariables.CurrentUser = comboBox_username.SelectedItem.ToString();
+                GetTargetCalories(comboBox_username.SelectedItem.ToString());
+                GetGender(comboBox_username.SelectedItem.ToString());
                 this.Hide();
-                
-                Form form = new mainLayout();
-                form.WindowState = FormWindowState.Maximized;
+
+                Form form = new mainLayout
+                {
+                    WindowState = FormWindowState.Maximized
+                };
                 form.Show();
             }
             else { 

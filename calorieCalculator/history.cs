@@ -19,7 +19,7 @@ namespace calorieCalculator
             InitializeComponent();
         }
 
-        Database database = new Database();
+        readonly Database database = new Database();
         private void populateDGVBreakfast(string date)
         {
             try
@@ -33,7 +33,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Breakfast");
                         cmd.Parameters.AddWithValue("@Date", date);
 
@@ -46,7 +46,7 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
         private void populateDGVLunch(string date)
@@ -62,7 +62,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Lunch");
                         cmd.Parameters.AddWithValue("@Date", date);
 
@@ -75,7 +75,7 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
         private void populateDGVDinner(string date)
@@ -91,7 +91,7 @@ namespace calorieCalculator
                     string query = "SELECT MealID, FoodName, CaloriesInServing FROM Meals WHERE Username = @Username AND MealType = @MealType AND Date = @Date";
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.currentUser);
+                        cmd.Parameters.AddWithValue("@Username", Database.GlobalVariables.CurrentUser);
                         cmd.Parameters.AddWithValue("@MealType", "Dinner");
                         cmd.Parameters.AddWithValue("@Date", date);
 
@@ -104,12 +104,12 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
             }
         }
         private void setCalorieTotal()
         { 
-            string username = Database.GlobalVariables.currentUser;
+            string username = Database.GlobalVariables.CurrentUser;
             int foodTotal = totalBreakfastCalories(username, formattedDate) + totalLunchCalories(username, formattedDate) + totalDinnerCalories(username, formattedDate);
             lbl_total.Text = foodTotal.ToString();
         }
@@ -143,7 +143,7 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
                 return 0;
             }
         }
@@ -178,7 +178,7 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 
@@ -214,7 +214,7 @@ namespace calorieCalculator
             catch (Exception ex)
             {
 
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 
@@ -222,9 +222,9 @@ namespace calorieCalculator
 
         private void mealTotal()
         {
-            lbl_breakfastTotal.Text = "Total - " + totalBreakfastCalories(Database.GlobalVariables.currentUser, formattedDate);
-            lbl_lunchTotal.Text = "Total - " + totalLunchCalories(Database.GlobalVariables.currentUser, formattedDate);
-            lbl_dinnerTotal.Text = "Total - " + totalDinnerCalories(Database.GlobalVariables.currentUser, formattedDate);
+            lbl_breakfastTotal.Text = "Total - " + totalBreakfastCalories(Database.GlobalVariables.CurrentUser, formattedDate);
+            lbl_lunchTotal.Text = "Total - " + totalLunchCalories(Database.GlobalVariables.CurrentUser, formattedDate);
+            lbl_dinnerTotal.Text = "Total - " + totalDinnerCalories(Database.GlobalVariables.CurrentUser, formattedDate);
         }
         string formattedDate;
 

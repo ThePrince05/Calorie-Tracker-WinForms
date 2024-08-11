@@ -17,22 +17,22 @@ namespace calorieCalculator
         public dashboard()
         {
             InitializeComponent();
-            setCalorieLabels();
+            SetCalorieLabels();
         }
-        Database database = new Database();
+        readonly Database database = new Database();
 
-        private void setCalorieLabels()
+        private void SetCalorieLabels()
         {
-            int targetCalories = Database.GlobalVariables.targetCalories;
+            int targetCalories = Database.GlobalVariables.TargetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
-            string username = Database.GlobalVariables.currentUser;
-            int foodTotal = totalBreakfastCalories(username) + totalLunchCalories(username) + totalDinnerCalories(username);
+            string username = Database.GlobalVariables.CurrentUser;
+            int foodTotal = TotalBreakfastCalories(username) + TotalLunchCalories(username) + TotalDinnerCalories(username);
             lbl_food.Text = foodTotal.ToString();
 
             
             int remaining = targetCalories - foodTotal;
-            string gender = Database.GlobalVariables.gender;
+            string gender = Database.GlobalVariables.Gender;
 
             if (remaining <= 0 && gender.Contains("Female")) {
                 lbl_bender.Text = "Slow down, little missy.";
@@ -59,7 +59,7 @@ namespace calorieCalculator
 
             lbl_remaining.Text = remaining.ToString();
         }
-        private int totalBreakfastCalories(string username)
+        private int TotalBreakfastCalories(string username)
         {
             try
             {
@@ -90,11 +90,11 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong on: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
                 return 0;
             }
         }
-        private int totalLunchCalories(string username)
+        private int TotalLunchCalories(string username)
         {
             try
             {
@@ -126,12 +126,12 @@ namespace calorieCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 
         }
-        private int totalDinnerCalories(string username)
+        private int TotalDinnerCalories(string username)
         {
             try
             {
@@ -163,7 +163,7 @@ namespace calorieCalculator
             catch (Exception ex)
             {
 
-                MessageBox.Show("Opps, something went wrong: " + ex.Message);
+                MessageBox.Show("Ops, something went wrong: " + ex.Message);
                 return 0;
             }
 

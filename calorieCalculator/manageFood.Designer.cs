@@ -49,6 +49,7 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.checkBox_serving = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_manageFood)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -76,7 +77,7 @@
             this.DGV_manageFood.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DGV_manageFood.RowHeadersWidth = 51;
             this.DGV_manageFood.RowTemplate.Height = 24;
-            this.DGV_manageFood.Size = new System.Drawing.Size(433, 450);
+            this.DGV_manageFood.Size = new System.Drawing.Size(433, 481);
             this.DGV_manageFood.TabIndex = 3;
             this.DGV_manageFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_manageFood_CellContentClick);
             // 
@@ -85,7 +86,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(494, 271);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 481);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -133,7 +134,7 @@
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(96, 621);
+            this.btn_save.Location = new System.Drawing.Point(96, 652);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(147, 41);
             this.btn_save.TabIndex = 48;
@@ -144,7 +145,7 @@
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(255, 621);
+            this.btn_clear.Location = new System.Drawing.Point(255, 652);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(147, 41);
             this.btn_clear.TabIndex = 49;
@@ -215,7 +216,7 @@
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(255, 680);
+            this.btn_delete.Location = new System.Drawing.Point(255, 711);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(147, 41);
             this.btn_delete.TabIndex = 55;
@@ -226,7 +227,7 @@
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(96, 680);
+            this.btn_update.Location = new System.Drawing.Point(96, 711);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(147, 41);
             this.btn_update.TabIndex = 56;
@@ -295,13 +296,26 @@
             this.label11.TabIndex = 83;
             this.label11.Text = "Search";
             // 
+            // checkBox_serving
+            // 
+            this.checkBox_serving.AutoSize = true;
+            this.checkBox_serving.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_serving.ForeColor = System.Drawing.Color.Gainsboro;
+            this.checkBox_serving.Location = new System.Drawing.Point(96, 595);
+            this.checkBox_serving.Name = "checkBox_serving";
+            this.checkBox_serving.Size = new System.Drawing.Size(197, 31);
+            this.checkBox_serving.TabIndex = 87;
+            this.checkBox_serving.Text = "Is it a Serving?";
+            this.checkBox_serving.UseVisualStyleBackColor = true;
+            // 
             // manageFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1200, 767);
+            this.ClientSize = new System.Drawing.Size(1200, 840);
+            this.Controls.Add(this.checkBox_serving);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -359,5 +373,6 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox_serving;
     }
 }
