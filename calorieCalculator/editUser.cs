@@ -24,36 +24,16 @@ namespace calorieCalculator
 
         private void DisplayUserInfo(string username)
         {
-            try
-            {
-                string connectionString = "Data Source=" + database.GetDatabasePath(); // Replace with your database path
-                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-                {
-                    conn.Open();
+                      
+            txt_currentName.Text = Database.GlobalVariables.CurrentName;
+            txt_currentSurname.Text = Database.GlobalVariables.CurrentSurname;
+            txt_currentGender.Text = Database.GlobalVariables.CurrentGender;
+            txt_currentAge.Text = Database.GlobalVariables.CurrentAge.ToString();
+            txt_currentHeight.Text = Database.GlobalVariables.CurrentHeight.ToString();
+            txt_currentWeight.Text = Database.GlobalVariables.CurrentWeight.ToString();
+            txt_currentCalories.Text = Database.GlobalVariables.CurrentTargetCalories.ToString();
 
-                    string query = "SELECT Name, Surname, Gender, Age, Height, Weight, TargetCalories FROM Users WHERE Username = @Username";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-                        using (SQLiteDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                txt_currentName.Text = reader.GetString(0);
-                                txt_currentSurname.Text = reader.GetString(1);
-                                txt_currentGender.Text = reader.GetString(2);
-                                txt_currentAge.Text = reader.GetInt32(3).ToString();
-                                txt_currentHeight.Text = reader.GetDouble(4).ToString();
-                                txt_currentWeight.Text = reader.GetDouble(5).ToString();
-                                txt_currentCalories.Text = reader.GetInt32(6).ToString();
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex) {
-                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
-            }
+
         }
 
         
@@ -426,7 +406,7 @@ namespace calorieCalculator
                     int TargetCalories = Convert.ToInt32(txt_calories.Text);
 
 
-                    database.UpdateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories);
+                    MessageBox.Show(database.UpdateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories) ? "User Updated Successfully" : " User Update Failed");
                 }
             } 
             catch(Exception ex) {

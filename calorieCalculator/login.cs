@@ -23,75 +23,10 @@ namespace calorieCalculator
             PopulateComboBox();
             
         }
-        public static class GlobalVariables
-        {
-            public static int TargetCalories { get; set; }
-        }
+       
 
-        private void GetTargetCalories(string username)
-        {
-            try
-            {
-                string databasePath = database.GetDatabasePath();
-                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
-                {
-                    conn.Open();
-
-                    string query = "SELECT TargetCalories FROM Users WHERE Username = @Username";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-
-                        object result = cmd.ExecuteScalar();
-                        if (result != DBNull.Value)
-                        {
-                            Database.GlobalVariables.TargetCalories = Convert.ToInt32(result);
-                        }
-                        else
-                        {
-                            Database.GlobalVariables.TargetCalories = 0;
-                        }
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Ops something went wrong on: " + ex.Message);
-            }
-        }
-
-        private void GetGender(string username)
-        {
-            try
-            {
-                string databasePath = database.GetDatabasePath();
-                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
-                {
-                    conn.Open();
-
-                    string query = "SELECT Gender FROM Users WHERE Username = @Username";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", username);
-
-                        object result = cmd.ExecuteScalar();
-                        if (result != DBNull.Value)
-                        {
-                            Database.GlobalVariables.Gender = result.ToString();
-                            //MessageBox.Show(Database.GlobalVariables.gender);
-                        }
-                        else
-                        {
-                            Database.GlobalVariables.Gender = "Unknown";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ops something went wrong on: " + ex.Message);
-            }
-        }
+       
+       
 
         readonly Database database = new Database();
 
@@ -205,8 +140,8 @@ namespace calorieCalculator
             if (comboBox_username.SelectedIndex != -1)
             {
                 Database.GlobalVariables.CurrentUser = comboBox_username.SelectedItem.ToString();
-                GetTargetCalories(comboBox_username.SelectedItem.ToString());
-                GetGender(comboBox_username.SelectedItem.ToString());
+                
+                
                 this.Hide();
 
                 Form form = new mainLayout

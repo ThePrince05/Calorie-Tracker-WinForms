@@ -33,7 +33,7 @@ namespace calorieCalculator
         }
 
         private void SetCalorieLabels() {
-            int targetCalories = Database.GlobalVariables.TargetCalories;
+            int targetCalories = Database.GlobalVariables.CurrentTargetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
             string username = Database.GlobalVariables.CurrentUser;

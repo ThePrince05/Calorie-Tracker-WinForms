@@ -23,7 +23,7 @@ namespace calorieCalculator
 
         private void SetCalorieLabels()
         {
-            int targetCalories = Database.GlobalVariables.TargetCalories;
+            int targetCalories = Database.GlobalVariables.CurrentTargetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
             string username = Database.GlobalVariables.CurrentUser;
@@ -32,7 +32,7 @@ namespace calorieCalculator
 
             
             int remaining = targetCalories - foodTotal;
-            string gender = Database.GlobalVariables.Gender;
+            string gender = Database.GlobalVariables.CurrentGender;
 
             if (remaining <= 0 && gender.Contains("Female")) {
                 lbl_bender.Text = "Slow down, little missy.";

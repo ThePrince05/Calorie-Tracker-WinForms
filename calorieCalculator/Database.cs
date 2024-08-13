@@ -9,6 +9,7 @@ using System.Data.SQLite;
 using Microsoft.Data.Sqlite;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.Common;
 
 
 namespace calorieCalculator
@@ -19,9 +20,14 @@ namespace calorieCalculator
         internal static class GlobalVariables
         {
             internal static string CurrentUser { get; set; }
-            internal static int TargetCalories { get; set; }
-            internal static string Gender { get; set; }
-           
+            internal static string CurrentName { get; set; }
+            internal static string CurrentSurname { get; set; }
+            internal static int CurrentTargetCalories { get; set; }
+            internal static string CurrentGender { get; set; }
+            internal static int CurrentAge { get; set; }
+            internal static double CurrentHeight { get; set; }
+            internal static double CurrentWeight{ get; set; }
+
         }
         internal string GenerateUsername(string firstname) {
 
@@ -143,6 +149,34 @@ namespace calorieCalculator
                 // MessageBox.Show("Database already exists.");
             }
         }
+        public int GetTargetCaloriesByUsername(string username)
+        {
+            string databasePath = GetDatabasePath();
+            using (var conn = new SQLiteConnection($"Data Source={databasePath}"))
+            {
+                conn.Open(); // Assuming the connection needs to be opened here
+
+                using (var command = conn.CreateCommand())
+                {
+                    command.CommandText = "SELECT TargetCalories FROM Users WHERE Username = @username";
+                    command.Parameters.AddWithValue("@username", username);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return reader.GetInt32(0);
+                        }
+                        else
+                        {
+                            // Handle case where user is not found
+                            return 0; // Or throw an exception
+                        }
+                    }
+                }
+            }
+        }
+
         internal void InsertUser(string username, string name,string surname, string gender, int age, double height, double weight, int targetCalories) {
             try
             {
@@ -308,7 +342,7 @@ namespace calorieCalculator
             }
         }
 
-        internal void UpdateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
+        internal bool UpdateUser(string username, string name, string surname, string gender, int age, double height, double weight, int targetCalories)
         {
             try
             {
@@ -331,18 +365,20 @@ namespace calorieCalculator
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("User information updated successfully");
+                        return true;
                     }
                     else
                     {
-                        MessageBox.Show("Error updating user information");
+                        return false;
                     }
+                    
                 }
-
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ops something went wrong on: " + ex.Message);
+                return false;
             }
 
         }

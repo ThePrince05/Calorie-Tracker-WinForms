@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
 using FontAwesome.Sharp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace calorieCalculator
 {
@@ -26,6 +31,17 @@ namespace calorieCalculator
  
             InitializeComponent();
             lbl_username.Text = Database.GlobalVariables.CurrentUser;
+            GetUserInfo(Database.GlobalVariables.CurrentUser);
+
+            CallSchool();
+
+            DateTime today = DateTime.Today;
+            Database.GlobalVariables.CurrentTargetCalories = GetHomeCalories(Database.GlobalVariables.CurrentUser, today);
+
+            DateTime dateObj = DateTime.Today;
+            string date = dateObj.ToString();
+            
+
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -45,8 +61,126 @@ namespace calorieCalculator
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        readonly Database database = new Database();
+        static void CallSchool()
+        {
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string filePath = Path.Combine(appDataPath, "Calorie Tracker", "schoolAttendance.txt");
+            string username = Database.GlobalVariables.CurrentUser; 
 
+            // Get today's date
+            DateTime today = DateTime.Today;
 
+            Database database = new Database();
+            // Check if user has already been prompted
+            if (CheckAttendance(filePath, username, today))
+            {
+                //MessageBox.Show("You've already been asked about today's attendance.");
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Did you go to school today?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                string answer;
+                int homeCalories = Database.GlobalVariables.CurrentTargetCalories -= 200;
+
+                if (result == DialogResult.Yes)
+                {
+                    // Perform action if user clicks Yes
+                    answer = "Yes";
+  
+                }
+                else
+                {
+                    // Perform action if user clicks No
+                    answer = "No";
+    
+                }
+
+                // Append attendance data to the file
+               
+                WriteAttendance(filePath, username, today, answer,homeCalories);
+            }
+        }
+        static int GetHomeCalories(string username, DateTime today)
+        {
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string filePath = Path.Combine(appDataPath, "Calorie Tracker", "schoolAttendance.txt");
+
+            Database database = new Database();
+            int defaultCalories = database.GetTargetCaloriesByUsername(Database.GlobalVariables.CurrentUser);
+
+            if (File.Exists(filePath))
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
+                {
+                    string[] data = line.Split(':');
+                    if (data.Length == 4 && data[0] == username && data[1] == today.ToString("yyyy-MM-dd") && data[2] == "No")
+                    {
+                        return Convert.ToInt32(data[3]);
+                    }
+                }
+            }
+
+            return defaultCalories;
+        }
+        static bool CheckAttendance(string filePath, string username, DateTime today)
+        {
+            if (!File.Exists(filePath))
+            {
+                return false;
+            }
+
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines)
+            {
+                string[] data = line.Split(':');
+                if (data[0] == username && data[1] == today.ToString("yyyy-MM-dd"))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static void WriteAttendance(string filePath, string username, DateTime today, string answer, int homeCalories)
+        {
+            File.AppendAllText(filePath, $"{username}:{today:yyyy-MM-dd}:{answer}:{homeCalories}\n");
+        }
+        private void GetUserInfo(string username)
+        {
+            try
+            {
+                string connectionString = "Data Source=" + database.GetDatabasePath(); // Replace with your database path
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "SELECT Name, Surname, Gender, Age, Height, Weight, TargetCalories FROM Users WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Database.GlobalVariables.CurrentName = reader.GetString(0);
+                                Database.GlobalVariables.CurrentSurname = reader.GetString(1);
+                                Database.GlobalVariables.CurrentGender = reader.GetString(2);
+                                Database.GlobalVariables.CurrentAge = reader.GetInt32(3);
+                                Database.GlobalVariables.CurrentHeight = reader.GetDouble(4);
+                                Database.GlobalVariables.CurrentWeight = reader.GetDouble(5);
+                                Database.GlobalVariables.CurrentTargetCalories = reader.GetInt32(6);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
+            }
+        }
 
         //Methods
         private void ActivateButton(object senderBtn, Color color)
@@ -76,7 +210,7 @@ namespace calorieCalculator
                // iconCurrentChildForm.IconChar = color;
             }
         }
-
+       
         private void DisableButton() {
             if (currentBtn != null) {
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
@@ -178,6 +312,11 @@ namespace calorieCalculator
         private void btn_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
