@@ -43,3 +43,5 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debu
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Debug\calorieCalculator.application
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.exe.manifest
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.application
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.deleteUser.resources
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Debug\calorieCalculator.splashScreen.resources

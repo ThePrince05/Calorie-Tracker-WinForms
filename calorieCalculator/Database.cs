@@ -10,6 +10,7 @@ using Microsoft.Data.Sqlite;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.Common;
+using System.Data.Entity;
 
 
 namespace calorieCalculator
@@ -381,6 +382,54 @@ namespace calorieCalculator
                 return false;
             }
 
+        }
+        internal void DeleteUser(string Username)
+        {
+            try
+            {
+                string databasePath = GetDatabasePath();
+                using (SQLiteConnection conn = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM Users WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", Username);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("User deleted successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error deleting user");
+                        }
+                    }
+
+
+                    string mealQuery = "DELETE FROM Meals WHERE Username = @Username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(mealQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", Username);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Meals deleted successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error deleting meals");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ops something went wrong: " + ex.Message);
+            }
         }
 
     }

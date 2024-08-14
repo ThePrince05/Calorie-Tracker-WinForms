@@ -64,9 +64,7 @@ namespace calorieCalculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           Database database = new Database();
-
-            database.GetDatabasePath();
+           
 
 
         }
@@ -93,9 +91,8 @@ namespace calorieCalculator
 
         private void lbl_createUser_Click(object sender, EventArgs e)
         {
-            Form newUser = new addUser();
-
-            newUser.Show();
+            Form addUser = new addUser();
+            addUser.ShowDialog();
         }
 
         private void lbl_createUser_MouseHover(object sender, EventArgs e)
@@ -125,8 +122,7 @@ namespace calorieCalculator
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Form newUser = new addUser();
-            newUser.Show();
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -168,6 +164,42 @@ namespace calorieCalculator
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form DeleteUser = new deleteUser();
+            DeleteUser.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void lbl_deleteUser_MouseHover(object sender, EventArgs e)
+        {
+            lbl_deleteUser.ForeColor = Color.Red;
+        }
+
+        private void lbl_deleteUser_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_deleteUser.ForeColor = Color.Gainsboro;
+        }
+
+        private void panel2_MouseHover(object sender, EventArgs e)
+        {
+            lbl_deleteUser.ForeColor = Color.Red;
+        }
+
+        private void panel2_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_deleteUser.ForeColor = Color.Gainsboro;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

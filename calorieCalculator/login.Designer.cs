@@ -37,9 +37,12 @@
             this.comboBox_username = new System.Windows.Forms.ComboBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_deleteUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +82,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
@@ -116,11 +120,31 @@
             this.iconPictureBox2.TabStop = false;
             this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbl_deleteUser);
+            this.panel2.ForeColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.panel2.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // lbl_deleteUser
+            // 
+            resources.ApplyResources(this.lbl_deleteUser, "lbl_deleteUser");
+            this.lbl_deleteUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_deleteUser.Name = "lbl_deleteUser";
+            this.lbl_deleteUser.Click += new System.EventHandler(this.label2_Click);
+            this.lbl_deleteUser.MouseLeave += new System.EventHandler(this.lbl_deleteUser_MouseLeave);
+            this.lbl_deleteUser.MouseHover += new System.EventHandler(this.lbl_deleteUser_MouseHover);
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.comboBox_username);
@@ -136,6 +160,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +177,8 @@
         private System.Windows.Forms.ComboBox comboBox_username;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_deleteUser;
     }
 }
 
