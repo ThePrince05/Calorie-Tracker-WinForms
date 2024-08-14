@@ -81,7 +81,7 @@ namespace calorieCalculator
             {
                 DialogResult result = MessageBox.Show("Did you go to school today?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 string answer;
-                int homeCalories = Database.GlobalVariables.CurrentTargetCalories -= 200;
+                int calories = database.GetTargetCaloriesByUsername(Database.GlobalVariables.CurrentUser);
 
                 if (result == DialogResult.Yes)
                 {
@@ -93,12 +93,12 @@ namespace calorieCalculator
                 {
                     // Perform action if user clicks No
                     answer = "No";
-    
+                    calories -= 200;
                 }
 
                 // Append attendance data to the file
                
-                WriteAttendance(filePath, username, today, answer,homeCalories);
+                WriteAttendance(filePath, username, today, answer,calories);
             }
         }
         static int GetHomeCalories(string username, DateTime today)
@@ -143,9 +143,9 @@ namespace calorieCalculator
             return false;
         }
 
-        static void WriteAttendance(string filePath, string username, DateTime today, string answer, int homeCalories)
+        static void WriteAttendance(string filePath, string username, DateTime today, string answer, int calories)
         {
-            File.AppendAllText(filePath, $"{username}:{today:yyyy-MM-dd}:{answer}:{homeCalories}\n");
+            File.AppendAllText(filePath, $"{username}:{today:yyyy-MM-dd}:{answer}:{calories}\n");
         }
         private void GetUserInfo(string username)
         {
@@ -170,7 +170,7 @@ namespace calorieCalculator
                                 Database.GlobalVariables.CurrentAge = reader.GetInt32(3);
                                 Database.GlobalVariables.CurrentHeight = reader.GetDouble(4);
                                 Database.GlobalVariables.CurrentWeight = reader.GetDouble(5);
-                                Database.GlobalVariables.CurrentTargetCalories = reader.GetInt32(6);
+                               //Database.GlobalVariables.CurrentTargetCalories = reader.GetInt32(6);
                             }
                         }
                     }
