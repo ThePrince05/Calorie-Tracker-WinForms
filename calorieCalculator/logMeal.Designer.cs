@@ -36,7 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lbl_manageFood = new System.Windows.Forms.Label();
             this.txt_foodName = new System.Windows.Forms.TextBox();
             this.lbl_foodName = new System.Windows.Forms.Label();
             this.txt_quantity = new System.Windows.Forms.TextBox();
@@ -81,22 +80,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_dinner)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_manageFood
-            // 
-            this.lbl_manageFood.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_manageFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_manageFood.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_manageFood.Location = new System.Drawing.Point(527, 18);
-            this.lbl_manageFood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_manageFood.Name = "lbl_manageFood";
-            this.lbl_manageFood.Size = new System.Drawing.Size(190, 47);
-            this.lbl_manageFood.TabIndex = 3;
-            this.lbl_manageFood.Text = "Log Meal";
-            // 
             // txt_foodName
             // 
             this.txt_foodName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_foodName.Location = new System.Drawing.Point(32, 108);
+            this.txt_foodName.Location = new System.Drawing.Point(34, 78);
             this.txt_foodName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_foodName.Name = "txt_foodName";
             this.txt_foodName.ReadOnly = true;
@@ -109,7 +96,7 @@
             this.lbl_foodName.AutoSize = true;
             this.lbl_foodName.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_foodName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_foodName.Location = new System.Drawing.Point(27, 77);
+            this.lbl_foodName.Location = new System.Drawing.Point(29, 47);
             this.lbl_foodName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_foodName.Name = "lbl_foodName";
             this.lbl_foodName.Size = new System.Drawing.Size(130, 28);
@@ -119,7 +106,7 @@
             // txt_quantity
             // 
             this.txt_quantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_quantity.Location = new System.Drawing.Point(350, 109);
+            this.txt_quantity.Location = new System.Drawing.Point(352, 79);
             this.txt_quantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_quantity.Name = "txt_quantity";
             this.txt_quantity.Size = new System.Drawing.Size(291, 31);
@@ -130,7 +117,7 @@
             this.lbl_quantity.AutoSize = true;
             this.lbl_quantity.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_quantity.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_quantity.Location = new System.Drawing.Point(345, 77);
+            this.lbl_quantity.Location = new System.Drawing.Point(347, 47);
             this.lbl_quantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_quantity.Name = "lbl_quantity";
             this.lbl_quantity.Size = new System.Drawing.Size(264, 28);
@@ -141,6 +128,7 @@
             // 
             this.DGV_manageFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_manageFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.DGV_manageFood.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +138,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGV_manageFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_manageFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_manageFood.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,9 +147,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_manageFood.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_manageFood.Location = new System.Drawing.Point(759, 87);
+            this.DGV_manageFood.Location = new System.Drawing.Point(761, 57);
             this.DGV_manageFood.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_manageFood.Name = "DGV_manageFood";
+            this.DGV_manageFood.ReadOnly = true;
             this.DGV_manageFood.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DGV_manageFood.RowHeadersWidth = 51;
             this.DGV_manageFood.RowTemplate.Height = 24;
@@ -173,7 +163,7 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(863, 47);
+            this.label1.Location = new System.Drawing.Point(865, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 37);
@@ -185,7 +175,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(27, 156);
+            this.label2.Location = new System.Drawing.Point(29, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 28);
@@ -203,7 +193,7 @@
             "Breakfast",
             "Lunch",
             "Dinner"});
-            this.comboBox_mealType.Location = new System.Drawing.Point(32, 187);
+            this.comboBox_mealType.Location = new System.Drawing.Point(34, 157);
             this.comboBox_mealType.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox_mealType.Name = "comboBox_mealType";
             this.comboBox_mealType.Size = new System.Drawing.Size(291, 31);
@@ -213,7 +203,7 @@
             // 
             this.btn_log.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_log.ForeColor = System.Drawing.Color.Black;
-            this.btn_log.Location = new System.Drawing.Point(284, 273);
+            this.btn_log.Location = new System.Drawing.Point(286, 243);
             this.btn_log.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_log.Name = "btn_log";
             this.btn_log.Size = new System.Drawing.Size(137, 41);
@@ -225,7 +215,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(12, 345);
+            this.panel1.Location = new System.Drawing.Point(12, 338);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1417, 9);
@@ -259,6 +249,7 @@
             // 
             this.DGV_breakfast.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_breakfast.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.DGV_breakfast.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_breakfast.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -271,6 +262,7 @@
             this.DGV_breakfast.Location = new System.Drawing.Point(32, 473);
             this.DGV_breakfast.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_breakfast.Name = "DGV_breakfast";
+            this.DGV_breakfast.ReadOnly = true;
             this.DGV_breakfast.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -302,6 +294,7 @@
             // 
             this.DGV_lunch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_lunch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.DGV_lunch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -314,6 +307,7 @@
             this.DGV_lunch.Location = new System.Drawing.Point(494, 473);
             this.DGV_lunch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_lunch.Name = "DGV_lunch";
+            this.DGV_lunch.ReadOnly = true;
             this.DGV_lunch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -345,6 +339,7 @@
             // 
             this.DGV_dinner.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_dinner.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.DGV_dinner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,6 +352,7 @@
             this.DGV_dinner.Location = new System.Drawing.Point(952, 473);
             this.DGV_dinner.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_dinner.Name = "DGV_dinner";
+            this.DGV_dinner.ReadOnly = true;
             this.DGV_dinner.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
@@ -519,7 +515,7 @@
             this.checkBox_serving.AutoSize = true;
             this.checkBox_serving.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_serving.ForeColor = System.Drawing.Color.Gainsboro;
-            this.checkBox_serving.Location = new System.Drawing.Point(386, 187);
+            this.checkBox_serving.Location = new System.Drawing.Point(388, 157);
             this.checkBox_serving.Name = "checkBox_serving";
             this.checkBox_serving.Size = new System.Drawing.Size(197, 31);
             this.checkBox_serving.TabIndex = 72;
@@ -542,7 +538,7 @@
             // txt_search
             // 
             this.txt_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(1235, 125);
+            this.txt_search.Location = new System.Drawing.Point(1237, 95);
             this.txt_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(161, 31);
@@ -553,7 +549,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(1230, 94);
+            this.label11.Location = new System.Drawing.Point(1232, 64);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 28);
@@ -564,7 +560,7 @@
             // 
             this.btn_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.ForeColor = System.Drawing.Color.Black;
-            this.btn_search.Location = new System.Drawing.Point(1237, 180);
+            this.btn_search.Location = new System.Drawing.Point(1239, 150);
             this.btn_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(137, 41);
@@ -614,7 +610,7 @@
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(1239, 227);
+            this.btn_cancel.Location = new System.Drawing.Point(1241, 197);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(137, 41);
@@ -668,7 +664,6 @@
             this.Controls.Add(this.lbl_quantity);
             this.Controls.Add(this.txt_foodName);
             this.Controls.Add(this.lbl_foodName);
-            this.Controls.Add(this.lbl_manageFood);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -686,8 +681,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_manageFood;
         private System.Windows.Forms.TextBox txt_foodName;
         private System.Windows.Forms.Label lbl_foodName;
         private System.Windows.Forms.TextBox txt_quantity;
