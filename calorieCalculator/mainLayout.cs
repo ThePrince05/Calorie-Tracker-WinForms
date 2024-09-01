@@ -332,12 +332,10 @@ namespace calorieCalculator
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            this.ShowInTaskbar = true;
+            notifyIcon1.Visible = false;
             this.WindowState = FormWindowState.Maximized;
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.ShowInTaskbar = true;
-                notifyIcon1.Visible = false;
-            }
+            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
