@@ -344,21 +344,21 @@ namespace calorieCalculator
         {
             this.WindowState = FormWindowState.Minimized;
 
+            bool MousePointerNotOnTaskBar = Screen.GetWorkingArea(this).Contains(Cursor.Position);
+            if (this.WindowState == FormWindowState.Minimized && MousePointerNotOnTaskBar)
+            {
+                this.ShowInTaskbar = false;
+                notifyIcon1.BalloonTipText = "Calorie Tracker has minimized to system tray";
+                notifyIcon1.ShowBalloonTip(2000);
+                notifyIcon1.Visible = true;
+            }
+
 
         }
         private void mainLayout_SizeChanged(object sender, EventArgs e)
         {
 
-            bool MousePointerNotOnTaskBar = Screen.GetWorkingArea(this).Contains(Cursor.Position);
-
-            if (this.WindowState == FormWindowState.Minimized && MousePointerNotOnTaskBar)
-            {
-                notifyIcon1.Icon = SystemIcons.Application;
-                notifyIcon1.BalloonTipText = "Calorie Tracker has minimized to system tray";
-                notifyIcon1.ShowBalloonTip(1000);
-                this.ShowInTaskbar = false;
-                notifyIcon1.Visible = true;
-            }
+           
         }
     }
 }
