@@ -19,6 +19,8 @@ namespace calorieCalculator
             InitializeComponent();
             SetCalorieLabels();
         }
+
+
         readonly Database database = new Database();
 
         private void SetCalorieLabels()

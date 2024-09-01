@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(deleteUser));
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.comboBox_username = new System.Windows.Forms.ComboBox();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "deleteUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

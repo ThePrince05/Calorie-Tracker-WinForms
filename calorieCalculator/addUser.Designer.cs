@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addUser));
             this.txt_name = new System.Windows.Forms.TextBox();
             this.lbl_userName = new System.Windows.Forms.Label();
             this.txt_userHeight = new System.Windows.Forms.TextBox();
@@ -245,6 +246,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_userName);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(811, 610);
             this.MinimumSize = new System.Drawing.Size(643, 610);

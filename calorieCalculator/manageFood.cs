@@ -428,5 +428,10 @@ namespace calorieCalculator
         {
             PopulateDataGridView();
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,8 +27,8 @@ namespace calorieCalculator
 
         public mainLayout()
         {
-          
- 
+
+
             InitializeComponent();
             lbl_username.Text = Database.GlobalVariables.CurrentUser;
             GetUserInfo(Database.GlobalVariables.CurrentUser);
@@ -40,10 +40,10 @@ namespace calorieCalculator
 
             DateTime dateObj = DateTime.Today;
             string date = dateObj.ToString();
-            
+
 
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7,60);
+            leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
 
             //form
@@ -53,8 +53,9 @@ namespace calorieCalculator
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         //structs
-        private struct RGBColors {
-            public static Color color1 = Color.FromArgb(172,126,241);
+        private struct RGBColors
+        {
+            public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95, 77, 221);
@@ -66,7 +67,7 @@ namespace calorieCalculator
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string filePath = Path.Combine(appDataPath, "Calorie Tracker", "schoolAttendance.txt");
-            string username = Database.GlobalVariables.CurrentUser; 
+            string username = Database.GlobalVariables.CurrentUser;
 
             // Get today's date
             DateTime today = DateTime.Today;
@@ -87,7 +88,7 @@ namespace calorieCalculator
                 {
                     // Perform action if user clicks Yes
                     answer = "Yes";
-  
+
                 }
                 else
                 {
@@ -97,8 +98,8 @@ namespace calorieCalculator
                 }
 
                 // Append attendance data to the file
-               
-                WriteAttendance(filePath, username, today, answer,calories);
+
+                WriteAttendance(filePath, username, today, answer, calories);
             }
         }
         static int GetHomeCalories(string username, DateTime today)
@@ -170,7 +171,7 @@ namespace calorieCalculator
                                 Database.GlobalVariables.CurrentAge = reader.GetInt32(3);
                                 Database.GlobalVariables.CurrentHeight = reader.GetDouble(4);
                                 Database.GlobalVariables.CurrentWeight = reader.GetDouble(5);
-                               //Database.GlobalVariables.CurrentTargetCalories = reader.GetInt32(6);
+                                //Database.GlobalVariables.CurrentTargetCalories = reader.GetInt32(6);
                             }
                         }
                     }
@@ -189,39 +190,42 @@ namespace calorieCalculator
             if (senderBtn != null)
             {
                 DisableButton();
-                
+
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37,36,81);
+                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
-                currentBtn.TextAlign=ContentAlignment.MiddleCenter;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
                 //left border button
                 leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0,currentBtn.Location.Y);
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
 
                 //Icon Current Child Form
-               // iconCurrentChildForm.IconChar = currentBtn.IconChar;
-               // iconCurrentChildForm.IconChar = color;
+                // iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                // iconCurrentChildForm.IconChar = color;
             }
         }
-       
-        private void DisableButton() {
-            if (currentBtn != null) {
+
+        private void DisableButton()
+        {
+            if (currentBtn != null)
+            {
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
-                currentBtn.TextImageRelation= TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign= ContentAlignment.MiddleLeft;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void OpenChildForm(Form childForm) {
+        private void OpenChildForm(Form childForm)
+        {
             // if (iconCurrentChildForm != null) { }
 
             currentChildForm = childForm;
@@ -274,7 +278,8 @@ namespace calorieCalculator
         {
             Reset();
         }
-        private void Reset() { 
+        private void Reset()
+        {
             DisableButton();
             leftBorderBtn.Visible = false;
         }
@@ -306,17 +311,54 @@ namespace calorieCalculator
 
         private void lbl_logout_MouseLeave(object sender, EventArgs e)
         {
-            lbl_logout.ForeColor= Color.RoyalBlue;
+            lbl_logout.ForeColor = Color.RoyalBlue;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.ShowInTaskbar = true;
+                notifyIcon1.Visible = false;
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+
+        }
+        private void mainLayout_SizeChanged(object sender, EventArgs e)
+        {
+
+            bool MousePointerNotOnTaskBar = Screen.GetWorkingArea(this).Contains(Cursor.Position);
+
+            if (this.WindowState == FormWindowState.Minimized && MousePointerNotOnTaskBar)
+            {
+                notifyIcon1.Icon = SystemIcons.Application;
+                notifyIcon1.BalloonTipText = "Calorie Tracker has minimized to system tray";
+                notifyIcon1.ShowBalloonTip(1000);
+                this.ShowInTaskbar = false;
+                notifyIcon1.Visible = true;
+            }
         }
     }
 }
