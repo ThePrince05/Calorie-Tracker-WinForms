@@ -332,9 +332,7 @@ namespace calorieCalculator
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.ShowInTaskbar = true;
-            notifyIcon1.Visible = false;
-            this.WindowState = FormWindowState.Maximized;
+            
             
         }
 
@@ -346,7 +344,6 @@ namespace calorieCalculator
             if (this.WindowState == FormWindowState.Minimized && MousePointerNotOnTaskBar)
             {
                 this.ShowInTaskbar = false;
-                notifyIcon1.BalloonTipText = "Calorie Tracker has minimized to system tray";
                 notifyIcon1.ShowBalloonTip(2000);
                 notifyIcon1.Visible = true;
             }
@@ -357,6 +354,13 @@ namespace calorieCalculator
         {
 
            
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            this.ShowInTaskbar = true;
+            notifyIcon1.Visible = false;
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

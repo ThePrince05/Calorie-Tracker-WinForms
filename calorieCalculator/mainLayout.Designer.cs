@@ -41,6 +41,7 @@
             this.lbl_username = new System.Windows.Forms.Label();
             this.iconPictureBox_user = new FontAwesome.Sharp.IconPictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btn_minimize = new FontAwesome.Sharp.IconButton();
             this.btn_close = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelShadow = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btn_minimize = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox_user)).BeginInit();
@@ -248,6 +248,22 @@
             this.panelTitleBar.TabIndex = 2;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // btn_minimize
+            // 
+            this.btn_minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_minimize.FlatAppearance.BorderSize = 0;
+            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimize.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_minimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btn_minimize.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_minimize.Location = new System.Drawing.Point(868, 0);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(56, 75);
+            this.btn_minimize.TabIndex = 2;
+            this.btn_minimize.UseVisualStyleBackColor = true;
+            this.btn_minimize.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // btn_close
             // 
             this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
@@ -341,26 +357,14 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "Calorie Tracker has minimized to system tray";
+            this.notifyIcon1.BalloonTipTitle = "Minimized";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Calorie Tracker";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // btn_minimize
-            // 
-            this.btn_minimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_minimize.FlatAppearance.BorderSize = 0;
-            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btn_minimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btn_minimize.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_minimize.Location = new System.Drawing.Point(868, 0);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(56, 75);
-            this.btn_minimize.TabIndex = 2;
-            this.btn_minimize.UseVisualStyleBackColor = true;
-            this.btn_minimize.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // mainLayout
             // 
