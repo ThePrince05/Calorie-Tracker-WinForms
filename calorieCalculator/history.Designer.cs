@@ -54,7 +54,7 @@
             // dateTimePicker_logHistory
             // 
             this.dateTimePicker_logHistory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_logHistory.Location = new System.Drawing.Point(556, 30);
+            this.dateTimePicker_logHistory.Location = new System.Drawing.Point(594, 30);
             this.dateTimePicker_logHistory.Name = "dateTimePicker_logHistory";
             this.dateTimePicker_logHistory.Size = new System.Drawing.Size(284, 31);
             this.dateTimePicker_logHistory.TabIndex = 4;
@@ -65,7 +65,7 @@
             this.lbl_dinner.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dinner.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_dinner.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_dinner.Location = new System.Drawing.Point(1091, 114);
+            this.lbl_dinner.Location = new System.Drawing.Point(1129, 112);
             this.lbl_dinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_dinner.Name = "lbl_dinner";
             this.lbl_dinner.Size = new System.Drawing.Size(131, 37);
@@ -86,7 +86,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGV_dinner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_dinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_dinner.Location = new System.Drawing.Point(955, 155);
+            this.DGV_dinner.Location = new System.Drawing.Point(993, 153);
             this.DGV_dinner.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_dinner.Name = "DGV_dinner";
             this.DGV_dinner.ReadOnly = true;
@@ -109,7 +109,7 @@
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(634, 114);
+            this.label4.Location = new System.Drawing.Point(672, 112);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 37);
@@ -130,7 +130,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGV_lunch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_lunch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_lunch.Location = new System.Drawing.Point(497, 155);
+            this.DGV_lunch.Location = new System.Drawing.Point(535, 153);
             this.DGV_lunch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_lunch.Name = "DGV_lunch";
             this.DGV_lunch.ReadOnly = true;
@@ -153,7 +153,7 @@
             this.lbl_breakfast.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_breakfast.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_breakfast.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_breakfast.Location = new System.Drawing.Point(171, 114);
+            this.lbl_breakfast.Location = new System.Drawing.Point(209, 112);
             this.lbl_breakfast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_breakfast.Name = "lbl_breakfast";
             this.lbl_breakfast.Size = new System.Drawing.Size(152, 37);
@@ -174,7 +174,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_breakfast.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_breakfast.Location = new System.Drawing.Point(35, 155);
+            this.DGV_breakfast.Location = new System.Drawing.Point(73, 153);
             this.DGV_breakfast.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGV_breakfast.Name = "DGV_breakfast";
             this.DGV_breakfast.ReadOnly = true;
@@ -197,7 +197,7 @@
             this.lbl_dinnerTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dinnerTotal.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_dinnerTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_dinnerTotal.Location = new System.Drawing.Point(1075, 359);
+            this.lbl_dinnerTotal.Location = new System.Drawing.Point(1113, 357);
             this.lbl_dinnerTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_dinnerTotal.Name = "lbl_dinnerTotal";
             this.lbl_dinnerTotal.Size = new System.Drawing.Size(192, 37);
@@ -209,7 +209,7 @@
             this.lbl_lunchTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lunchTotal.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_lunchTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_lunchTotal.Location = new System.Drawing.Point(613, 359);
+            this.lbl_lunchTotal.Location = new System.Drawing.Point(651, 357);
             this.lbl_lunchTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_lunchTotal.Name = "lbl_lunchTotal";
             this.lbl_lunchTotal.Size = new System.Drawing.Size(192, 37);
@@ -221,7 +221,7 @@
             this.lbl_breakfastTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_breakfastTotal.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_breakfastTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_breakfastTotal.Location = new System.Drawing.Point(147, 359);
+            this.lbl_breakfastTotal.Location = new System.Drawing.Point(185, 357);
             this.lbl_breakfastTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_breakfastTotal.Name = "lbl_breakfastTotal";
             this.lbl_breakfastTotal.Size = new System.Drawing.Size(192, 37);
@@ -233,7 +233,7 @@
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gainsboro;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(614, 427);
+            this.label8.Location = new System.Drawing.Point(652, 425);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(226, 37);
@@ -245,7 +245,7 @@
             this.lbl_total.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_total.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_total.Location = new System.Drawing.Point(680, 464);
+            this.lbl_total.Location = new System.Drawing.Point(718, 462);
             this.lbl_total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(192, 37);
@@ -257,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1420, 570);
+            this.ClientSize = new System.Drawing.Size(1475, 570);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lbl_dinnerTotal);

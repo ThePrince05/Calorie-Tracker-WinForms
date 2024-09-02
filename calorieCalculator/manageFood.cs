@@ -433,5 +433,65 @@ namespace calorieCalculator
         {
 
         }
+
+        private void txt_foodName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_foodName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_calories_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_foodID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_calories_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_kilojoules_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox_serving_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace calorieCalculator
 {
@@ -18,13 +19,60 @@ namespace calorieCalculator
         {
             InitializeComponent();
             SetCalorieLabels();
+            SetCaloriePercentage();
         }
 
 
         readonly Database database = new Database();
 
+        private int GetCaloriePercentage()
+        {
+            try
+            {
+                int targetCalories = Database.GlobalVariables.CurrentTargetCalories;
+
+                string username = Database.GlobalVariables.CurrentUser;
+                int foodTotal = TotalBreakfastCalories(username) + TotalLunchCalories(username) + TotalDinnerCalories(username);
+                int percentage = Convert.ToInt32(Math.Round((double)foodTotal / targetCalories * 100));
+
+                if (percentage >= 100)
+                {
+                    return 100;
+
+                }
+                else if (percentage > 0)
+                {
+                    return percentage;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
+                return 0;
+            }
+
+        }
+
+        private void SetCaloriePercentage() {
+            try
+            {
+                ProgressBar.Value = GetCaloriePercentage();
+                ProgressBar.Minimum = 0;
+                ProgressBar.Maximum = 100;
+                ProgressBar.Text = GetCaloriePercentage().ToString() + " %";
+                ProgressBar.Update();
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
+            }
+        }
         private void SetCalorieLabels()
         {
+           
             int targetCalories = Database.GlobalVariables.CurrentTargetCalories;
             lbl_goal.Text = targetCalories.ToString();
 
@@ -176,6 +224,11 @@ namespace calorieCalculator
         }
 
         private void lbl_bender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProgressBar_Click(object sender, EventArgs e)
         {
 
         }

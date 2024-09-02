@@ -45,8 +45,9 @@ C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Rele
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.pdb
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.splashScreen.resources
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\obj\Release\calorieCalculator.deleteUser.resources
-C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\Krypton.Toolkit.dll
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\Microsoft.Xaml.Behaviors.dll
-C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\Krypton.Toolkit.xml
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\Microsoft.Xaml.Behaviors.xml
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\CircularProgressBar.dll
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\WinFormAnimation.dll
+C:\Users\Administrator\source\repos\calorieCalculator\calorieCalculator\bin\Release\CircularProgressBar.xml
