@@ -461,17 +461,17 @@ namespace calorieCalculator
 
         private void txt_currentName_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_name.Text = txt_currentName.Text;
+           
         }
 
         private void txt_currentSurname_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_surname.Text = txt_currentSurname.Text;
+          
         }
 
         private void txt_currentAge_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_age.Text = txt_currentAge.Text;
+          
         }
 
         private void txt_currentGender_MouseClick(object sender, MouseEventArgs e)
@@ -481,17 +481,100 @@ namespace calorieCalculator
 
         private void txt_currentHeight_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_userHeight.Text = txt_currentHeight.Text;
+         
         }
 
         private void txt_currentWeight_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_userWeight.Text = txt_currentWeight.Text;
+         
         }
 
         private void txt_currentCalories_MouseClick(object sender, MouseEventArgs e)
         {
+          
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_currentName_Click(object sender, EventArgs e)
+        {
+            txt_name.Text = txt_currentName.Text;
+        }
+
+        private void txt_currentSurname_Click(object sender, EventArgs e)
+        {
+            txt_surname.Text = txt_currentSurname.Text;
+        }
+
+        private void txt_currentAge_Click(object sender, EventArgs e)
+        {
+             txt_age.Text = txt_currentAge.Text;
+        }
+
+        private void txt_currentGender_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_currentHeight_Click(object sender, EventArgs e)
+        {
+            txt_userHeight.Text = txt_currentHeight.Text;
+        }
+
+        private void txt_currentWeight_Click(object sender, EventArgs e)
+        {
+            txt_userWeight.Text = txt_currentWeight.Text;
+        }
+
+        private void txt_currentCalories_Click(object sender, EventArgs e)
+        {
             txt_calories.Text = txt_currentCalories.Text;
+        }
+
+        private void btn_save_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btn_save_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidateForm() == true)
+                {
+
+                    string Username = Database.GlobalVariables.CurrentUser;
+                    string Name = txt_name.Text;
+                    string Surname = txt_surname.Text;
+                    string Gender = comboBox_gender.SelectedItem.ToString();
+                    int Age = Convert.ToInt32(txt_age.Text);
+                    double Height = Convert.ToDouble(txt_userHeight.Text);
+                    double Weight = Convert.ToDouble(txt_userWeight.Text);
+                    int TargetCalories = Convert.ToInt32(txt_calories.Text);
+
+
+                    MessageBox.Show(database.UpdateUser(Username, Name, Surname, Gender, Age, Height, Weight, TargetCalories) ? "User Updated Successfully" : " User Update Failed");
+                    ClearFields();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ops, something went wrong on: " + ex.Message);
+            }
+        }
+
+        private void btn_clear_Click_1(object sender, EventArgs e)
+        {
+            ClearFields();
         }
     }
 }

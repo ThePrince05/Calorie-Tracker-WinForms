@@ -271,7 +271,9 @@ namespace calorieCalculator
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new editUser());
+            //OpenChildForm(new editUser());
+            Form edit = new editUser();
+            edit.Show();
         }
 
         private void iconPictureBox_user_Click(object sender, EventArgs e)
