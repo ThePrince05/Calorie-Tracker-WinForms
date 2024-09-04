@@ -362,5 +362,10 @@ namespace calorieCalculator
             notifyIcon1.Visible = false;
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

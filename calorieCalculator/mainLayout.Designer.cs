@@ -50,6 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_maximize = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox_user)).BeginInit();
@@ -238,6 +239,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.btn_maximize);
             this.panelTitleBar.Controls.Add(this.btn_minimize);
             this.panelTitleBar.Controls.Add(this.btn_close);
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
@@ -285,7 +287,7 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(646, 22);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(638, 24);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(180, 42);
             this.lblTitleChildForm.TabIndex = 0;
@@ -366,6 +368,22 @@
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // btn_maximize
+            // 
+            this.btn_maximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_maximize.FlatAppearance.BorderSize = 0;
+            this.btn_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_maximize.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btn_maximize.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_maximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_maximize.Location = new System.Drawing.Point(812, 0);
+            this.btn_maximize.Name = "btn_maximize";
+            this.btn_maximize.Size = new System.Drawing.Size(56, 75);
+            this.btn_maximize.TabIndex = 3;
+            this.btn_maximize.UseVisualStyleBackColor = true;
+            this.btn_maximize.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
             // mainLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,5 +435,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private FontAwesome.Sharp.IconButton btn_minimize;
+        private FontAwesome.Sharp.IconButton btn_maximize;
     }
 }
