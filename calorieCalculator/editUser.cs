@@ -576,5 +576,10 @@ namespace calorieCalculator
         {
             ClearFields();
         }
+
+        private void editUser_MaximumSizeChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

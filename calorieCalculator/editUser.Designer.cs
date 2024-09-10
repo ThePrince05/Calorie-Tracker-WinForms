@@ -472,6 +472,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Profile";
             this.TopMost = true;
+            this.MaximumSizeChanged += new System.EventHandler(this.editUser_MaximumSizeChanged);
             this.Load += new System.EventHandler(this.editUser_Load);
             this.Resize += new System.EventHandler(this.editUser_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
