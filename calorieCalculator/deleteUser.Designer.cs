@@ -47,9 +47,9 @@
             this.label2.Location = new System.Drawing.Point(171, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(429, 36);
+            this.label2.Size = new System.Drawing.Size(426, 36);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Please select the user to details";
+            this.label2.Text = "Please select the user to delete";
             // 
             // iconPictureBox1
             // 
