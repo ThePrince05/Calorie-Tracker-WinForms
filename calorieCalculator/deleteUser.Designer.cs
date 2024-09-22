@@ -47,9 +47,9 @@
             this.label2.Location = new System.Drawing.Point(171, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(426, 36);
+            this.label2.Size = new System.Drawing.Size(397, 36);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Please select the user to delete";
+            this.label2.Text = "Please select a user to delete";
             // 
             // iconPictureBox1
             // 
@@ -68,7 +68,7 @@
             // comboBox_username
             // 
             this.comboBox_username.FormattingEnabled = true;
-            this.comboBox_username.Location = new System.Drawing.Point(198, 272);
+            this.comboBox_username.Location = new System.Drawing.Point(198, 262);
             this.comboBox_username.Name = "comboBox_username";
             this.comboBox_username.Size = new System.Drawing.Size(290, 34);
             this.comboBox_username.TabIndex = 62;
@@ -91,7 +91,7 @@
             this.lbl_userName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Underline);
             this.lbl_userName.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_userName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_userName.Location = new System.Drawing.Point(193, 231);
+            this.lbl_userName.Location = new System.Drawing.Point(193, 232);
             this.lbl_userName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_userName.Name = "lbl_userName";
             this.lbl_userName.Size = new System.Drawing.Size(127, 27);
@@ -107,7 +107,7 @@
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 34;
             this.iconPictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconPictureBox2.Location = new System.Drawing.Point(494, 272);
+            this.iconPictureBox2.Location = new System.Drawing.Point(494, 262);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(42, 34);
             this.iconPictureBox2.TabIndex = 63;

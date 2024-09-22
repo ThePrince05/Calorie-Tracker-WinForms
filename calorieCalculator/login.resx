@@ -157,7 +157,7 @@
     <value>Arial Rounded MT Bold, 13.8pt, style=Underline</value>
   </data>
   <data name="lbl_userName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 167</value>
+    <value>144, 178</value>
   </data>
   <data name="lbl_userName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>

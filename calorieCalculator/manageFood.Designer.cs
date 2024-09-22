@@ -45,7 +45,6 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.checkBox_serving = new System.Windows.Forms.CheckBox();
@@ -251,7 +250,7 @@
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(1364, 339);
+            this.btn_cancel.Location = new System.Drawing.Point(1364, 291);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(137, 41);
@@ -259,19 +258,6 @@
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_search
-            // 
-            this.btn_search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.ForeColor = System.Drawing.Color.Black;
-            this.btn_search.Location = new System.Drawing.Point(1364, 292);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(137, 41);
-            this.btn_search.TabIndex = 85;
-            this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
@@ -282,6 +268,7 @@
             this.txt_search.Size = new System.Drawing.Size(161, 31);
             this.txt_search.TabIndex = 84;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            this.txt_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_search_KeyPress);
             // 
             // label11
             // 
@@ -319,7 +306,6 @@
             this.ClientSize = new System.Drawing.Size(1537, 840);
             this.Controls.Add(this.checkBox_serving);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.iconPictureBox1);
@@ -369,7 +355,6 @@
         private System.Windows.Forms.Button btn_update;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox checkBox_serving;

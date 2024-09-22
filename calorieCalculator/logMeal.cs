@@ -674,5 +674,10 @@ namespace calorieCalculator
         {
 
         }
+
+        private void txt_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FilterDataGridViewByFoodName(txt_search.Text);
+        }
     }
 }

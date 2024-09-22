@@ -3,104 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\deleteuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\deleteuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|c:\\users\\administrator\\source\\repos\\caloriecalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\mainlayout.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\mainlayout.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\mainlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\mainlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\mainlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\mainlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\managefood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\managefood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\managefood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\managefood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\packages\\CircularProgressBar.2.8.0.16\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\CircularProgressBar.2.8.0.16\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\logmeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\deleteuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\deleteuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EAC5BEC-0C0D-4DCD-8DB1-190BD5BE4F50}|calorieCalculator\\calorieTracker.csproj|solutionrelative:caloriecalculator\\history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -121,300 +37,62 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\login.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\login.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\login.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:00:18.172Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "mainLayout.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\mainLayout.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\mainLayout.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T20:31:45.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "editUser.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\editUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
-              "RelativeToolTip": "calorieCalculator\\editUser.cs",
-              "ViewState": "AQIAADgCAAAAAAAAAAAawEUCAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:43:10.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mainLayout.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.Designer.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\mainLayout.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.Designer.cs",
-              "RelativeToolTip": "calorieCalculator\\mainLayout.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T09:03:32.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "deleteUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\deleteUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\deleteUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\deleteUser.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\deleteUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T09:17:50.856Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "addUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\addUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:43:20.355Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "mainLayout.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\mainLayout.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\mainLayout.cs",
-              "RelativeToolTip": "calorieCalculator\\mainLayout.cs",
-              "ViewState": "AQIAAGIBAAAAAAAAAIA5wHEBAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T09:18:25.404Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "editUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\editUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\editUser.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\editUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:43:09.206Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\dashboard.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\dashboard.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\dashboard.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T21:02:27.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Program.cs",
-              "RelativeToolTip": "calorieCalculator\\Program.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABcAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:41:47.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "manageFood.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\manageFood.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\manageFood.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\manageFood.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\manageFood.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T10:22:34.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "splashScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\splashScreen.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\splashScreen.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\splashScreen.cs",
-              "RelativeToolTip": "calorieCalculator\\splashScreen.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T10:45:24.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "logMeal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs",
               "RelativeDocumentMoniker": "calorieCalculator\\logMeal.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs [Design]",
               "RelativeToolTip": "calorieCalculator\\logMeal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:42:39.083Z"
+              "WhenOpened": "2024-08-02T08:42:39.083Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
+              "Title": "logMeal.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs",
+              "RelativeDocumentMoniker": "calorieCalculator\\logMeal.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs",
+              "RelativeToolTip": "calorieCalculator\\logMeal.cs",
+              "ViewState": "AQIAALYBAAAAAAAAAAAAANUBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T08:42:41.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "history.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\history.cs",
               "RelativeDocumentMoniker": "calorieCalculator\\history.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\history.cs [Design]",
               "RelativeToolTip": "calorieCalculator\\history.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T20:49:28.02Z"
+              "WhenOpened": "2024-08-02T20:49:28.02Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "manageFood.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\manageFood.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\manageFood.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\manageFood.cs",
-              "RelativeToolTip": "calorieCalculator\\manageFood.cs",
-              "ViewState": "AQIAADoBAAAAAAAAAAASwEYBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:42:25.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\dashboard.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\dashboard.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\dashboard.cs",
-              "RelativeToolTip": "calorieCalculator\\dashboard.cs",
-              "ViewState": "AQIAANgAAAAAAAAAAAAEwOMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T21:20:44.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "readme.txt",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\packages\\CircularProgressBar.2.8.0.16\\readme.txt",
-              "RelativeDocumentMoniker": "packages\\CircularProgressBar.2.8.0.16\\readme.txt",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\packages\\CircularProgressBar.2.8.0.16\\readme.txt",
-              "RelativeToolTip": "packages\\CircularProgressBar.2.8.0.16\\readme.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-01T22:31:19.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "splashScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\splashScreen.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\splashScreen.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\splashScreen.cs [Design]",
-              "RelativeToolTip": "calorieCalculator\\splashScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T10:15:50.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "logMeal.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\logMeal.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\logMeal.cs",
-              "RelativeToolTip": "calorieCalculator\\logMeal.cs",
-              "ViewState": "AQIAAO0BAAAAAAAAAAAewPoBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:42:41.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "deleteUser.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\deleteUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\deleteUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\deleteUser.cs",
-              "RelativeToolTip": "calorieCalculator\\deleteUser.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAACoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T09:21:47.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "addUser.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\addUser.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\addUser.cs",
-              "RelativeToolTip": "calorieCalculator\\addUser.cs",
-              "ViewState": "AQIAAHcBAAAAAAAAAAAAABMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:43:21.762Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "login.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\login.Designer.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\login.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\login.Designer.cs",
-              "RelativeToolTip": "calorieCalculator\\login.Designer.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAewLAAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T10:15:39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Database.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\Database.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Database.cs",
-              "RelativeToolTip": "calorieCalculator\\Database.cs",
-              "ViewState": "AQIAAHkBAAAAAAAAAAAAAJ8BAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T10:26:03.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 0,
               "Title": "history.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\history.cs",
               "RelativeDocumentMoniker": "calorieCalculator\\history.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\history.cs",
               "RelativeToolTip": "calorieCalculator\\history.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAowBUAAAAcAAAA",
+              "ViewState": "AQIAAIwCAAAAAAAAAAAgwJMCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T20:51:48.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Validation.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Validation.cs",
-              "RelativeDocumentMoniker": "calorieCalculator\\Validation.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\calorieCalculator\\calorieCalculator\\Validation.cs",
-              "RelativeToolTip": "calorieCalculator\\Validation.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAowAwAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:44:11.38Z"
+              "WhenOpened": "2024-08-02T20:51:48.185Z",
+              "EditorCaption": ""
             }
           ]
         }

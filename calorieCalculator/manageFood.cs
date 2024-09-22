@@ -204,7 +204,7 @@ namespace calorieCalculator
             checkBox_serving.Checked = false;
             
         }
-        private void filterDataGridViewByFoodName(string foodName)
+        private void FilterDataGridViewByFoodName(string foodName)
         {
             try
             {
@@ -403,27 +403,7 @@ namespace calorieCalculator
 
         }
 
-        private void btn_search_Click(object sender, EventArgs e)
-        {
-            int validation;
-            if (txt_search.Text == "" || txt_search.Text.Length < 3)
-            {
-                validation = 1;
-                txt_search.BackColor = Color.Red;
-                MessageBox.Show("Enter a food name that it at least three characters long.");
-            }
-            else
-            {
-                txt_search.BackColor = Color.White;
-                validation = 0;
-            }
-
-            if (validation == 0)
-            {
-                filterDataGridViewByFoodName(txt_search.Text);
-            }
-        }
-
+       
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             PopulateDataGridView();
@@ -492,6 +472,11 @@ namespace calorieCalculator
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FilterDataGridViewByFoodName(txt_search.Text);
         }
     }
 }
