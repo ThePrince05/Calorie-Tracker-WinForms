@@ -510,16 +510,25 @@ namespace calorieCalculator
 
         private void lbl_addFood_MouseHover(object sender, EventArgs e)
         {
-            lbl_modifyFood.ForeColor = Color.Red;
+            lbl_Food.ForeColor = Color.Red;
         }
 
         private void lbl_addFood_Click(object sender, EventArgs e)
         {
             // show add food Panel 1451, 492
-            lbl_modifyFood.Visible = false;
-            panel_addFood.Width = 1451;
-            panel_addFood.Height = 492;
-            PopulateDataGridView();
+            if (panel_addFood.Width == 0 && panel_addFood.Height == 0)
+            {
+                panel_addFood.Width = 1451;
+                panel_addFood.Height = 492;
+                PopulateDataGridView();
+                lbl_Food.Text = "Hide Food";
+            }
+            else {
+                panel_addFood.Width = 0;
+                panel_addFood.Height = 0;
+                lbl_Food.Text = "Modify Food";
+            }
+            
             
         }
         private void ClearFields()
@@ -532,7 +541,7 @@ namespace calorieCalculator
 
         private void lbl_addFood_MouseLeave(object sender, EventArgs e)
         {
-            lbl_modifyFood.ForeColor = Color.Gainsboro;
+            lbl_Food.ForeColor = Color.Gainsboro;
         }
 
         private void DGV_manageFood_CellContentClick(object sender, DataGridViewCellEventArgs e)
