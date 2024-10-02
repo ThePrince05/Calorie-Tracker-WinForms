@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
@@ -268,12 +269,24 @@ namespace calorieCalculator
             OpenChildForm(new manageFood());
         }
 
+        Form edit = null;
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            //OpenChildForm(new editUser());
-            Form edit = new editUser();
-            edit.Show();
+          
+
+            if (edit == null || edit.IsDisposed) {
+                edit = new editUser();
+
+                edit.Show();
+               
+                // Reset the variable when the form is closed.
+                edit.FormClosed += (s, args) => edit = null;
+            }
+            else
+            {
+                edit.BringToFront();
+            }
         }
 
         private void iconPictureBox_user_Click(object sender, EventArgs e)
@@ -360,9 +373,11 @@ namespace calorieCalculator
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
+            
             this.ShowInTaskbar = true;
             notifyIcon1.Visible = false;
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)

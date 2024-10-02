@@ -296,7 +296,7 @@
             this.panel_addFood.Controls.Add(this.lbl_quantity);
             this.panel_addFood.Controls.Add(this.txt_foodName);
             this.panel_addFood.Controls.Add(this.lbl_foodName);
-            this.panel_addFood.Location = new System.Drawing.Point(12, 551);
+            this.panel_addFood.Location = new System.Drawing.Point(73, 551);
             this.panel_addFood.Name = "panel_addFood";
             this.panel_addFood.Size = new System.Drawing.Size(1451, 492);
             this.panel_addFood.TabIndex = 87;
@@ -521,10 +521,10 @@
             this.lbl_Food.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Food.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_Food.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Food.Location = new System.Drawing.Point(1323, 517);
+            this.lbl_Food.Location = new System.Drawing.Point(1394, 517);
             this.lbl_Food.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Food.Name = "lbl_Food";
-            this.lbl_Food.Size = new System.Drawing.Size(139, 31);
+            this.lbl_Food.Size = new System.Drawing.Size(130, 31);
             this.lbl_Food.TabIndex = 88;
             this.lbl_Food.Text = "Modify Food";
             this.lbl_Food.Click += new System.EventHandler(this.lbl_addFood_Click);
@@ -537,7 +537,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1475, 1055);
+            this.ClientSize = new System.Drawing.Size(1557, 1055);
             this.Controls.Add(this.lbl_Food);
             this.Controls.Add(this.panel_addFood);
             this.Controls.Add(this.lbl_total);
