@@ -41,6 +41,7 @@
             this.lbl_username = new System.Windows.Forms.Label();
             this.iconPictureBox_user = new FontAwesome.Sharp.IconPictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btn_maximize = new FontAwesome.Sharp.IconButton();
             this.btn_minimize = new FontAwesome.Sharp.IconButton();
             this.btn_close = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btn_maximize = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox_user)).BeginInit();
@@ -250,6 +250,22 @@
             this.panelTitleBar.TabIndex = 2;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // btn_maximize
+            // 
+            this.btn_maximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_maximize.FlatAppearance.BorderSize = 0;
+            this.btn_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_maximize.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btn_maximize.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_maximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_maximize.Location = new System.Drawing.Point(812, 0);
+            this.btn_maximize.Name = "btn_maximize";
+            this.btn_maximize.Size = new System.Drawing.Size(56, 75);
+            this.btn_maximize.TabIndex = 3;
+            this.btn_maximize.UseVisualStyleBackColor = true;
+            this.btn_maximize.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
             // btn_minimize
             // 
             this.btn_minimize.Dock = System.Windows.Forms.DockStyle.Right;
@@ -366,23 +382,6 @@
             this.notifyIcon1.Text = "Calorie Tracker";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // btn_maximize
-            // 
-            this.btn_maximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_maximize.FlatAppearance.BorderSize = 0;
-            this.btn_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_maximize.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btn_maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
-            this.btn_maximize.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_maximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_maximize.Location = new System.Drawing.Point(812, 0);
-            this.btn_maximize.Name = "btn_maximize";
-            this.btn_maximize.Size = new System.Drawing.Size(56, 75);
-            this.btn_maximize.TabIndex = 3;
-            this.btn_maximize.UseVisualStyleBackColor = true;
-            this.btn_maximize.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // mainLayout
             // 

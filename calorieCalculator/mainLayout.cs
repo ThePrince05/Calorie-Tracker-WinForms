@@ -26,6 +26,11 @@ namespace calorieCalculator
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
+        Form logMeal = new logMeal();
+        Form history = new history();
+        Form manageFood = new manageFood();
+       
+
         public mainLayout()
         {
 
@@ -245,6 +250,7 @@ namespace calorieCalculator
 
         }
 
+      
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -254,19 +260,19 @@ namespace calorieCalculator
         private void btn_logMeal_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new logMeal());
+            OpenChildForm(logMeal);
         }
 
         private void btn_history_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new history());
+            OpenChildForm(history);
         }
 
         private void btn_manageFood_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new manageFood());
+            OpenChildForm(manageFood);
         }
 
         Form edit = null;
@@ -345,23 +351,14 @@ namespace calorieCalculator
 
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            
-            
-        }
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-
-            bool MousePointerNotOnTaskBar = Screen.GetWorkingArea(this).Contains(Cursor.Position);
-            if (this.WindowState == FormWindowState.Minimized && MousePointerNotOnTaskBar)
-            {
-                this.ShowInTaskbar = false;
+            // this.WindowState = FormWindowState.Minimized;
+            this.Hide();
+        
                 notifyIcon1.ShowBalloonTip(2000);
                 notifyIcon1.Visible = true;
-            }
+        
 
 
         }
@@ -373,10 +370,11 @@ namespace calorieCalculator
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
-            
-            this.ShowInTaskbar = true;
+
+            this.Show();
+            //this.WindowState = FormWindowState.Maximized;
             notifyIcon1.Visible = false;
-            this.WindowState = FormWindowState.Maximized;
+            
 
         }
 

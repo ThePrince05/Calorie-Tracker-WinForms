@@ -466,6 +466,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1210, 794);
             this.Name = "editUser";
             this.Padding = new System.Windows.Forms.Padding(100, 50, 100, 50);
