@@ -248,7 +248,6 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(980, 75);
             this.panelTitleBar.TabIndex = 2;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btn_maximize
             // 
@@ -303,11 +302,12 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(638, 24);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(357, 24);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(180, 42);
             this.lblTitleChildForm.TabIndex = 0;
             this.lblTitleChildForm.Text = "Welcome";
+            this.lblTitleChildForm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelShadow
             // 
@@ -398,7 +398,7 @@
             this.Name = "mainLayout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mainLayout";
-            this.Load += new System.EventHandler(this.mainLayout_Load);
+            this.SizeChanged += new System.EventHandler(this.mainLayout_SizeChanged);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

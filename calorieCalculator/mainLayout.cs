@@ -57,6 +57,10 @@ namespace calorieCalculator
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            // center form
+            lblTitleChildForm.Location = new Point(638, 24);
+
         }
         //structs
         private struct RGBColors
@@ -245,11 +249,6 @@ namespace calorieCalculator
             lblTitleChildForm.Text = childForm.Text;
         }
 
-        private void mainLayout_Load(object sender, EventArgs e)
-        {
-
-        }
-
       
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
@@ -312,18 +311,7 @@ namespace calorieCalculator
             login.Show();
         }
 
-        //drag form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
-
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+      
 
         private void lbl_logout_MouseHover(object sender, EventArgs e)
         {
@@ -362,11 +350,7 @@ namespace calorieCalculator
 
 
         }
-        private void mainLayout_SizeChanged(object sender, EventArgs e)
-        {
-
-           
-        }
+       
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
@@ -381,6 +365,11 @@ namespace calorieCalculator
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void mainLayout_SizeChanged(object sender, EventArgs e)
+        {
+            lblTitleChildForm.Location = new Point(638, 24);
         }
     }
 }
