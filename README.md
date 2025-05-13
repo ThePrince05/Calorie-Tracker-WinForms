@@ -21,7 +21,7 @@ A Kid-Friendly Calorie Tracker that dynamically adjusts daily calorie goals base
 ## 📦 Installation
 1. 	Clone the repository:
   	 ```bash
-    git clone https://github.com/ThePrince05/JokeAndQuote.git
+    git clone https://github.com/ThePrince05/Calorie-Tracker-WinForms.git
 2.	Open the project in Visual Studio.
 3. 	Select the Calorie-Tracker-WinForms.sln file from the cloned folder
 4.	Press F5 to build and launch the app
