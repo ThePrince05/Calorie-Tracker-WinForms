@@ -15,7 +15,7 @@ A Kid-Friendly Calorie Tracker that dynamically adjusts daily calorie goals base
 
 ## 🛠️ Technologies Used
 -	💻 WinForms – For building the desktop user interface
--	🗂️ SQLite – Lightweight local database used to store application data and food entrie
+-	🗂️ SQLite – Lightweight local database used to store application data and food entries
 -	🎨 FontAwesome.Sharp – Provides modern, scalable icons for a visually appealing UI
 
 ## 📦 Installation
